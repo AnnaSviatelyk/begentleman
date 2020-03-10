@@ -3,6 +3,7 @@
     height: auto;
 
     padding: 32px 157px 40px 157px;
+    margin-bottom: 12px;
 
     background-color: #000000;
 
@@ -87,6 +88,10 @@
             text-transform: uppercase;
             text-decoration: none;
         }
+
+        &:hover {
+
+        }
     }
 
     &__social-icons {
@@ -103,4 +108,40 @@
             transform: scale(1.1);
         }
     }
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 157px 14px 157px;
+
+    &__information {
+        width: 585px;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            opacity: 0.64;
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1.25;
+            letter-spacing: 0.12px;
+            text-align: left;
+            color: #333333;
+        }
+    }
+
+    &__payment-systems {
+        img {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
 }
