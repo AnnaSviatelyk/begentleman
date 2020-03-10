@@ -56,6 +56,8 @@
     &__subscribe-form-enter-email {
 
         width: 183px;
+        height: 24px;
+
         font-family: 'Lato', sans-serif;
         font-size: 12px;
         font-weight: 300;
@@ -63,7 +65,15 @@
         color: #ffffff95;
 
         padding-bottom: 6px;
+        padding-right: 6px;
         border-bottom: 1px solid #ffffff;
+
+        overflow: hidden;
+        white-space: nowrap;
+
+        span {
+            outline: none;
+        }
     }
 
     &__subscribe-form-button {
