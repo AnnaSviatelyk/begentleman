@@ -72,6 +72,7 @@
         font-weight: 300;
         line-height: 1.2;
         letter-spacing: 0.1px;
+        transition: .3s;
 
         background-color: #ffffff;
 
@@ -90,6 +91,7 @@
         }
 
         &:hover {
+            background-color: #ffffff90;
 
         }
     }
