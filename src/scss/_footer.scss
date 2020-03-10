@@ -1,0 +1,106 @@
+.footer {
+    width: 100%;
+    height: auto;
+
+    padding: 32px 157px 40px 157px;
+
+    background-color: #000000;
+
+    &__navigation-columns {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__navigation-column {
+        li {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.29;
+            letter-spacing: 0.14px;
+
+            cursor: pointer;
+
+            color: #ffffff95;
+
+            list-style: none;
+
+            margin-bottom: 12px;
+
+            &:hover {
+                color: #ffffff;
+            }
+        }
+
+        p {
+            width: 259px;
+            color: #ffffff95;
+            
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 1.5;
+            letter-spacing: 0.12px;
+
+            margin-bottom: 24px;
+        }
+    }
+
+    &__subscribe-form {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    &__subscribe-form-enter-email {
+
+        width: 183px;
+        font-family: 'Lato', sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+
+        color: #ffffff95;
+
+        padding-bottom: 6px;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    &__subscribe-form-button {
+        font-family: Lato;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.1px;
+
+        background-color: #ffffff;
+
+        width: 75px;
+        height: 24px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            color: #333333;
+
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    &__social-icons {
+        img {
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        img:hover  {
+            transform: scale(1.1);
+        }
+    }
+}
