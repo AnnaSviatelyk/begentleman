@@ -22,8 +22,19 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: './src/index.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'product-page.html',
+            template: './src/product-page.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            filename: 'shop-page.html',
+            template: './src/shop-page.html'
+        }),
+
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
@@ -32,36 +43,49 @@ module.exports = {
     module: {
         rules: [
             {
-            test: /\.scss$/,
-            use: [{
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                    publicPath: '../'
-                }
-            }, {
-                loader: "css-loader" // translates CSS into CommonJS
-            }, {
-                loader: "sass-loader" // compiles Sass to CSS
-            }]
-        },
-        {
-            test: /\.html$/,
-            loader: 'html-loader'
-        },
-        {
-            test: /\.(png|jpe?g|svg|gif)$/,
-            use: [
-                {
-                  loader: 'file-loader',
-                  options: {
-                      name: '[name].[ext]',
-                      outputPath: 'images',
-                      publicPath: 'images',
-                      esModule: false
-                  }
-                },
-              ]
-        }
+                test: /\.scss$/,
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: '../'
+                    }
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "sass-loader" // compiles Sass to CSS
+                }]
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
+            },
+            {
+                test: /\.(png|jpe?g|svg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'images',
+                            publicPath: 'images',
+                            esModule: false
+                        }
+                    },
+                ]
+            },
+            // {
+            //     test: /\.html$/,
+            //     use: [
+            //         {
+            //           loader: 'file-loader',
+            //           options: {
+            //               name: '[name].[ext]'
+
+            //           }
+            //         },
+            //       ],
+            //       exclude: path.resolve(__dirname, 'src/index.html')
+            // }
         ]
     }
 };
