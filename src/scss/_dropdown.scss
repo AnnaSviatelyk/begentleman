@@ -1,4 +1,14 @@
 .selector {
+  &--active {
+    .selector__select-ul {
+      display: block;
+    }
+
+    .selector__default-option:before {
+      transform: rotate(-225deg);
+      top: 15px;
+    }
+  }
   &__select-wrap {
     width: 163px;
     margin: 0 0 32px 0;
@@ -36,11 +46,6 @@
       border-color: transparent transparent #333333 #333333;
       transform: rotate(-45deg);
     }
-
-    &:active:before {
-      transform: rotate(-225deg);
-      top: 15px;
-    }
   }
 
   &__select-ul {
@@ -49,19 +54,6 @@
     width: 100%;
     background: #ffffff;
     display: none;
-
-    li {
-      padding: 11px 16px;
-      cursor: pointer;
-
-      font-family: "Lato", sans-serif;
-      font-size: 11px;
-      font-weight: 300;
-      text-transform: uppercase;
-
-      line-height: 1.21;
-      letter-spacing: 0.28px;
-    }
   }
 
   &__select-ul li:hover {
@@ -69,6 +61,17 @@
   }
 
   &__option {
+    padding: 11px 16px;
+    cursor: pointer;
+
+    font-family: "Lato", sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    line-height: 1.21;
+    letter-spacing: 0.28px;
+
     &--active {
       font-weight: normal;
     }
