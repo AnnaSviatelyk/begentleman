@@ -11,6 +11,7 @@ let outputFilename = '[name].js';
 module.exports = {
     mode: 'production',
     entry: './src/main.js',
+    devtool: false,
     output: {
         filename: outputFilename,
         path: outDirectory,
@@ -38,7 +39,8 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
-        })
+        }),
+        new webpack.SourceMapDevToolPlugin({})
     ],
     module: {
         rules: [
