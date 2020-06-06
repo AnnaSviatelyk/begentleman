@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="71.5" viewBox="0 0 129 71.5">
+  <g id="Group_53" data-name="Group 53" transform="translate(-619 -18.5)">
+    <g id="Group_16" data-name="Group 16">
+      <text id="BG" transform="translate(656 60)" font-size="40" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">BG</tspan></text>
+      <text id="be_gentleman_" data-name="be gentleman " transform="translate(619 87)" font-size="16" font-family="Lato-Light, Lato" font-weight="300" letter-spacing="0.02em"><tspan x="0" y="0">BE GENTLEMAN </tspan></text>
+    </g>
+    <g id="gentleman" transform="translate(660 18)">
+      <g id="Group_43" data-name="Group 43" transform="translate(0 0.5)">
+        <path id="Path_58" data-name="Path 58" d="M9.081,7.508a47.451,47.451,0,0,1,.6-5.986.419.419,0,0,0,0-.072C9.644.537,6.469.5,5.5.5c-1.565,0-4.189.126-4.189.969a1.048,1.048,0,0,0,.013.106,47.1,47.1,0,0,1,.6,5.934C.7,7.928,0,8.536,0,9.24c0,1.468,2.844,2.26,5.5,2.26S11,10.708,11,9.24C11,8.536,10.3,7.928,9.081,7.508ZM8.4,9.186a7.321,7.321,0,0,1-2.9.4,7.321,7.321,0,0,1-2.9-.4c0-.2-.01-.4-.013-.6A10.051,10.051,0,0,0,5.5,8.938a10.051,10.051,0,0,0,2.914-.356C8.411,8.784,8.4,8.985,8.4,9.186ZM5.5,1.792a12.933,12.933,0,0,1-3.31-.323A12.933,12.933,0,0,1,5.5,1.146a12.933,12.933,0,0,1,3.31.323A12.933,12.933,0,0,1,5.5,1.792Z" transform="translate(0 -0.5)"/>
+      </g>
+    </g>
+  </g>
+</svg>

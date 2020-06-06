@@ -12,20 +12,6 @@ const renderData = (array) => {
             content = content + item
         }
     })
-    const pagination = `<div class="pagination">
-    <a class="pagination__arrow pagination__arrow--prev">&laquo;</a>
-    <a href="#" class="pagination__link pagination__link--active">1</a>
-    <a href="#" class="pagination__link">2</a>
-    <a href="#" class="pagination__link">3</a>
-    <a href="#" class="pagination__link">4</a>
-    <a href="#" class="pagination__link">5</a>
-    <a href="#" class="pagination__link">6</a>
-    <a class="pagination__arrow pagination__arrow--next">&raquo;</a>
-</div>`
-
-if(content !== '') {
-    content = content + pagination
-}
     productsContainer.innerHTML = content
 }
 
@@ -72,11 +58,15 @@ const selectCategoryHandler = (category) => {
 //Filter by category
 const filterProductsByCategory = (category) => {
     const filteredData = mockData.filter(cur => cur.category === category)
-    if(filteredData.length === 0 && category !== 'All products') {
+    if (filteredData.length === 0 && category !== 'All products') {
+        renderData(filteredData)
         document.querySelector('.empty-filter-result').style.display = 'flex'
-    } 
+    } else if (category === 'All products') {
+        renderData(mockData)
+    } else {
+        renderData(filteredData)
 
-    renderData(filteredData)
+    }
 }
 
 const selectorOptions = document.querySelectorAll(DOMstrings.selectorOption);
