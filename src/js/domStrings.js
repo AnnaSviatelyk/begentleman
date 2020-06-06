@@ -12,6 +12,6 @@ export const DOMstrings = {
     paginationLink: '.pagination__link',
     paginationLinkActive: 'pagination__link--active',
     arrowBack: '.pagination__arrow--prev',
-    arrowNext: '.pagination__arrow--next',
+    arrowNext: '.pagination__arrow--next'
 }
 

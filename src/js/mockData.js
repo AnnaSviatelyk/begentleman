@@ -4,7 +4,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 190,
         color: 'grey',
-        image: 'images/trousers-1.svg',
+        image: 'trousers-1.svg',
         category: 'Trousers'
     },
 
@@ -13,7 +13,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 121,
         color: 'black',
-        image: 'images/bag-1.svg',
+        image: 'bag-1.svg',
         category: 'Bags'
     },
 
@@ -22,7 +22,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 424,
         color: 'grey',
-        image: 'images/coat-1.svg',
+        image: 'coat-1.svg',
         category: 'Coats and Jackets'
     },
 
@@ -31,7 +31,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 182,
         color: 'lightBlue',
-        image: 'images/shirt-1.svg',
+        image: 'shirt-1.svg',
         category: 'Shirts'
     },
 
@@ -40,7 +40,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 423,
         color: 'other',
-        image: 'images/jacket-1.svg',
+        image: 'jacket-1.svg',
         category: 'Coats and Jackets'
     },
 
@@ -49,7 +49,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 182,
         color: 'blue',
-        image: 'images/shirt-2.svg',
+        image: 'shirt-2.svg',
         category: 'Shirts'
     },
 
@@ -58,7 +58,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 99,
         color: 'white',
-        image: 'images/shirt-3.svg',
+        image: 'shirt-3.svg',
         category: 'Shirts'
     },
 
@@ -67,7 +67,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 121,
         color: 'black',
-        image: 'images/bag-1.svg',
+        image: 'bag-1.svg',
         category: 'Bags'
     },
 
@@ -76,7 +76,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 190,
         color: 'grey',
-        image: 'images/trousers-1.svg',
+        image: 'trousers-1.svg',
         category: 'Trousers'
     }
 

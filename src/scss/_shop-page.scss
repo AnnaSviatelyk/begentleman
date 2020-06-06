@@ -293,6 +293,7 @@
   }
 
   &__products-container {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
   }
@@ -313,59 +314,12 @@
       }
     }
 
-    &:nth-child(2) {
-      .all-products__product-image {
-        background-image: url(images/bag-1.svg);
-      }
-    }
 
-    &:nth-child(3) {
-      .all-products__product-image {
-        background-image: url(images/coat-1.svg);
-      }
-    }
-
-    &:nth-child(4) {
-      .all-products__product-image {
-        background-image: url(images/shirt-1.svg);
-      }
-    }
-
-    &:nth-child(5) {
-      .all-products__product-image {
-        background-image: url(images/jacket-1.svg);
-      }
-    }
-
-    &:nth-child(6) {
-      .all-products__product-image {
-        background-image: url(images/shirt-2.svg);
-      }
-    }
-
-    &:nth-child(7) {
-      .all-products__product-image {
-        background-image: url(images/shirt-3.svg);
-      }
-    }
-
-    &:nth-child(8) {
-      .all-products__product-image {
-        background-image: url(images/bag-1.svg);
-      }
-    }
-
-    &:last-child {
-      .all-products__product-image {
-        background-image: url(images/trousers-1.svg);
-      }
-    }
   }
 
   &__product-image {
     width: 270px;
     height: 248px;
-    background-image: url(images/trousers-1.svg);
     transition: transform 0.3s;
   }
 
@@ -473,4 +427,23 @@
       color: #ffffff;
     }
   }
+}
+
+.empty-filter-result {
+  display: none;
+  margin-left: 200px;
+  flex-direction: column;;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    color: #333333;
+
+    &__icon {
+      width: 64px;
+      height: 64px;
+      background-image: url(images/hanger.svg);
+      background-size: cover;
+    }
 }

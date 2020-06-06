@@ -12,13 +12,26 @@ const renderData = (array) => {
             content = content + item
         }
     })
+    const pagination = `<div class="pagination">
+    <a class="pagination__arrow pagination__arrow--prev">&laquo;</a>
+    <a href="#" class="pagination__link pagination__link--active">1</a>
+    <a href="#" class="pagination__link">2</a>
+    <a href="#" class="pagination__link">3</a>
+    <a href="#" class="pagination__link">4</a>
+    <a href="#" class="pagination__link">5</a>
+    <a href="#" class="pagination__link">6</a>
+    <a class="pagination__arrow pagination__arrow--next">&raquo;</a>
+</div>`
 
+if(content !== '') {
+    content = content + pagination
+}
     productsContainer.innerHTML = content
 }
 
 const getHtmlString = (product) => {
     return (`<a class="all-products__product" href="product-page.html">
-    <div class="all-products__product-image"></div>
+    <div class="all-products__product-image" style='background-image: url(${require('./images/' + product.image)})'></div>
     <div class="all-products__product-description">
         <span class="all-products__category">${product.category}</span>
         <h4 class="product-heading all-products__product-heading">${product.title}</h4>
@@ -56,17 +69,22 @@ const selectCategoryHandler = (category) => {
     });
 }
 
+//Filter by category
 const filterProductsByCategory = (category) => {
     const filteredData = mockData.filter(cur => cur.category === category)
+    if(filteredData.length === 0 && category !== 'All products') {
+        document.querySelector('.empty-filter-result').style.display = 'flex'
+    } 
+
     renderData(filteredData)
 }
+
 const selectorOptions = document.querySelectorAll(DOMstrings.selectorOption);
 selectorOptions.forEach(cur => {
     selectCategoryHandler(cur)
 })
 
 //Fit, Size
-
 const registerToggeleActiveClassListener = (optionClass, optionClassActive) => {
     const filterOptions = document.querySelectorAll(optionClass);
     filterOptions.forEach(cur => {
