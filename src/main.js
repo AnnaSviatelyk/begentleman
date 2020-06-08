@@ -1,6 +1,8 @@
 import './main.scss'
 import mockData from './js/mockData'
 import { DOMstrings } from './js/domStrings'
+import noUiSlider from 'nouislider'
+import 'nouislider/distribute/nouislider.css'
 
 //Rendering Data 
 const renderData = (array) => {
@@ -58,14 +60,12 @@ const selectCategoryHandler = (category) => {
 //Filter by category
 const filterProductsByCategory = (category) => {
     const filteredData = mockData.filter(cur => cur.category === category)
-    if (filteredData.length === 0 && category !== 'All products') {
-        renderData(filteredData)
-        document.querySelector('.empty-filter-result').style.display = 'flex'
-    } else if (category === 'All products') {
+    if (category === 'All products') {
+        noProductsFound(filteredData)
         renderData(mockData)
     } else {
+        noProductsFound(filteredData)
         renderData(filteredData)
-
     }
 }
 
@@ -74,19 +74,38 @@ selectorOptions.forEach(cur => {
     selectCategoryHandler(cur)
 })
 
-//Fit, Size
-const registerToggeleActiveClassListener = (optionClass, optionClassActive) => {
+//Add eventListeners
+const registerToggeleActiveClassListener = (optionClass, optionClassActive, filterBy) => {
     const filterOptions = document.querySelectorAll(optionClass);
     filterOptions.forEach(cur => {
         cur.addEventListener('click', function () {
+            const parameterName = cur.textContent
+            const parameterID = cur.id
             document.querySelector('.' + optionClassActive).classList.remove(optionClassActive);
             cur.classList.add(optionClassActive);
+            filterByParameter(parameterName, parameterID, filterBy)
         })
     })
 }
-registerToggeleActiveClassListener(DOMstrings.filterSize, DOMstrings.filterSizeSelected);
-registerToggeleActiveClassListener(DOMstrings.filterFit, DOMstrings.filterFitSelected);
+registerToggeleActiveClassListener(DOMstrings.filterSize, DOMstrings.filterSizeSelected, 'size');
+registerToggeleActiveClassListener(DOMstrings.filterFit, DOMstrings.filterFitSelected, 'fit');
+registerToggeleActiveClassListener(DOMstrings.filterColor, DOMstrings.filterColorSelected, 'color');
 
+//Filter by fit 
+const filterByParameter = (parameterName, parameterID, filterBy) => {
+    if (filterBy === 'fit') {
+        const filteredData = mockData.filter(cur => cur.fit === parameterName.toLowerCase())
+        renderData(filteredData)
+    } else if (filterBy === 'size') {
+        const filteredData = mockData.filter(cur => cur.size.includes(parseFloat(parameterName)))
+        renderData(filteredData)
+    }
+    else if (filterBy === 'color') {
+        const filteredData = mockData.filter(cur => cur.color === parameterID)
+        noProductsFound(filteredData)
+        renderData(filteredData)
+    }
+}
 //Pagination
 registerToggeleActiveClassListener(DOMstrings.paginationLink, DOMstrings.paginationLinkActive)
 const paginationPageChange = () => {
@@ -119,10 +138,45 @@ const paginationPageChange = () => {
 
 paginationPageChange();
 
+//Price range
+const slider = document.getElementById('slider');
+noUiSlider.create(slider, {
+    start: [99, 300],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 1000
+    }
+});
 
+slider.noUiSlider.on('update', (values) => {
+    document.querySelector(DOMstrings.lowerPriceInRange).textContent = `$${parseInt(values[0])}`
+    document.querySelector(DOMstrings.higherPriceInRange).textContent = `$${parseInt(values[1])}`
+});
 
+slider.noUiSlider.on('end', (values) => {
+    const filteredData = mockData.filter(cur => cur.price >= (parseInt(values[0])) && cur.price <= (parseInt(values[1])))
+    renderData(filteredData)
+    noProductsFound(filteredData)
 
+})
 
+const noProductsFound = (filteredData) => {
+    if (filteredData.length === 0) {
+        document.querySelector(DOMstrings.emptyFilter).style.display = 'flex'
+        document.querySelector(DOMstrings.paginationContainer).style.display = 'none'
+    } else {
+        document.querySelector(DOMstrings.emptyFilter).style.display = 'none'
+        document.querySelector(DOMstrings.paginationContainer).style.display = 'flex'
+    }
+
+}
+
+//Clean filters
+document.querySelector(DOMstrings.cleanFilters).addEventListener('click', () => {
+    renderData(mockData)
+
+})
 
 
 

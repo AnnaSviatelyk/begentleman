@@ -105,30 +105,31 @@
 
             <div class="filter__price">
                 <h3 class="filter__category-heading">Price:</h3>
-                <div class="filter__price-number">
-                    <span>$45</span>
-                    <span>$1536</span>
-                </div>
+                <div id="slider"></div>
+                <div">
 
-                <div class="filter__price-range">
-                    <div class="filter__selected"></div>
-                    <div class="filter__dragger"></div>
-                </div>
+                    <div class="filter__price-number">
+                        <span class="filter__price-number filter__price-number--lower">$99</span>
+                        <span class="filter__price-number filter__price-number--higher">$300</span>
+                    </div>
             </div>
 
             <div class="filter__color">
                 <h3 class="filter__category-heading">Color:</h3>
                 <div class="filter__colors">
-                    <div class="filter__color-option"></div>
-                    <div class="filter__color-option"></div>
-                    <div class="filter__color-option"></div>
-                    <div class="filter__color-option"></div>
-                    <div class="filter__color-option"></div>
-                    <div class="filter__color-option"></div>
-                    <div class="filter__color-option"></div>
-                    <div class="filter__color-option"></div>
+                    <div class="filter__color-option filter__color-option--active" id="white"></div>
+                    <div class="filter__color-option" id='lightBlue'></div>
+                    <div class="filter__color-option" id="lightGrey"></div>
+                    <div class="filter__color-option" id="green"></div>
+                    <div class="filter__color-option" id='red'></div>
+                    <div class="filter__color-option" id='blue'></div>
+                    <div class="filter__color-option" id='grey'></div>
+                    <div class="filter__color-option" id='black'></div>
                 </div>
             </div>
+
+            <button class="filter__clean-filters">Clean filters</button>
+
         </section>
         <section class="all-products">
             <div class="all-products__products-and-pagination-container">

@@ -27,7 +27,7 @@
 .filter {
   margin-left: 157px;
   margin-right: 95px;
-  margin-bottom: 120px;
+  margin-bottom: 188px;
   width: 163px;
   height: 496px;
 
@@ -91,7 +91,7 @@
     line-height: 1.21;
     letter-spacing: 0.28px;
 
-    transition: scale 0.3s;
+    transition: all 0.3s;
 
     color: #333333;
 
@@ -143,6 +143,7 @@
   }
 
   &__price-range {
+    margin-bottom: 8px;
     position: relative;
     width: 163px;
     height: 5px;
@@ -200,7 +201,7 @@
     letter-spacing: 0.28px;
     text-transform: uppercase;
 
-    transition: scale 0.3s;
+    transition: all 0.3s;
 
     color: #333333;
 
@@ -240,24 +241,29 @@
   }
 
   &__color-option {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: #fff9f2;
 
     margin-right: 11px;
     margin-bottom: 12px;
+    transition: all 0.3s;
+
+    &--active {
+      transform: scale(1.1);
+    }
 
     &:nth-child(2) {
-      background-color: #efefef;
+      background-color: #cae2ec;
     }
 
     &:nth-child(3) {
-      background-color: #dfe6e9;
+      background-color: #e6e8e9;
     }
 
     &:nth-child(4) {
-      background-color: #4d8888;
+      background-color: #4d8874;
       margin-right: 0;
     }
 
@@ -279,9 +285,33 @@
     }
   }
 
-  &__color-option:hover,
-  &__color-option:active {
+  &__color-option:hover:not(.filter__color-option--active) {
     transform: scale(0.9);
+  }
+
+  &__clean-filters {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    width: 90px;
+    height: 30px;
+    margin-left: 34px;
+    background-color: transparent;
+    border: solid 1px #333333;
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -377,7 +407,7 @@
 
 .pagination {
   display: inline-block;
-  margin: 0 auto;
+  margin-left: 200px;
 
   &__arrow {
     cursor: pointer;
@@ -445,4 +475,42 @@
     background-image: url(images/hanger.svg);
     background-size: cover;
   }
+}
+
+//SLIDER
+.noUi-target {
+  box-shadow: none !important;
+  border-radius: 5px !important;
+}
+.noUi-horizontal {
+  height: 5px !important;
+  background-color: #e3e3e3 !important;
+  border: none !important;
+  margin-bottom: 8px;
+}
+
+.noUi-connect {
+  background-color: #333333 !important;
+  border-radius: 25px !important;
+}
+
+.noUi-handle {
+  width: 12px !important;
+  height: 12px !important;
+  border: solid 0.5px #333333 !important;
+  background-color: #333333 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  outline: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  right: -6px !important;
+  top: -4px !important;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none !important;
 }
