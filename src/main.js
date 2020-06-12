@@ -31,7 +31,48 @@ const getHtmlString = (product) => {
 
 renderData(mockData);
 
-//Filters 
+//Filters
+//Creating object for all filters 
+const defaultFilters = {
+    category: null,
+    fit: null,
+    size: null,
+    price: null,
+    color: null
+}
+
+let filtersContainer = { ...defaultFilters }
+
+//FilterData function
+const filterData = () => {
+    // get active filters
+    const activeFilters = Object.keys(filtersContainer).filter(key => filtersContainer[key])
+    // filter data
+    const filteredData = mockData.filter(item => {
+
+        let matches = true
+        activeFilters.forEach(cur => {
+            if (!matches) {
+                return
+            }
+
+            if (cur === 'size') {
+                matches = matches && item.size.includes(filtersContainer[cur])
+            } else if (cur === 'price') {
+                matches = matches && item.price >= filtersContainer.price[0] && item.price <= filtersContainer.price[1]
+
+            } else {
+                matches = matches && item[cur] === filtersContainer[cur]
+            }
+        })
+
+        return matches
+    })
+
+    renderData(filteredData)
+    noProductsFound(filteredData)
+}
+
 const categoriesSelector = document.querySelector(DOMstrings.selector)
 if (categoriesSelector) {
     categoriesSelector.addEventListener('click', function () {
@@ -39,12 +80,12 @@ if (categoriesSelector) {
     });
 }
 
-//Category
+//Eventlisteners on Category
 const selectCategoryHandler = (category) => {
     //Add eventlistener to every item in NodeList
     category.addEventListener('click', function () {
         //Replace text in default category to selected one 
-        const categoryName = this.querySelector('p').textContent;
+        const categoryName = this.querySelector('p').textContent
         document.querySelector(DOMstrings.selectorOptionText).textContent = categoryName;
 
         //Remove active class from others 
@@ -59,14 +100,12 @@ const selectCategoryHandler = (category) => {
 
 //Filter by category
 const filterProductsByCategory = (category) => {
-    const filteredData = mockData.filter(cur => cur.category === category)
     if (category === 'All products') {
-        noProductsFound(filteredData)
-        renderData(mockData)
+        filtersContainer.category = null
     } else {
-        noProductsFound(filteredData)
-        renderData(filteredData)
+        filtersContainer.category = category
     }
+    filterData()
 }
 
 const selectorOptions = document.querySelectorAll(DOMstrings.selectorOption);
@@ -74,16 +113,33 @@ selectorOptions.forEach(cur => {
     selectCategoryHandler(cur)
 })
 
-//Add eventListeners
+//Add EventListeners on fit, size and color
 const registerToggeleActiveClassListener = (optionClass, optionClassActive, filterBy) => {
     const filterOptions = document.querySelectorAll(optionClass);
     filterOptions.forEach(cur => {
         cur.addEventListener('click', function () {
             const parameterName = cur.textContent
             const parameterID = cur.id
-            document.querySelector('.' + optionClassActive).classList.remove(optionClassActive);
+            const selectedFilter = document.querySelector('.' + optionClassActive)
+
+            if (cur.classList.contains(optionClassActive)) {
+                document.querySelector('.' + optionClassActive).classList.remove(optionClassActive);
+                if (filterBy === 'size') {
+                    filtersContainer.size = null
+                } else if (filterBy === 'fit') {
+                    filtersContainer.fit = null
+                } else if (filterBy === 'color') {
+                    filtersContainer.color = null
+                }
+                filterData()
+                return
+            }
+
+            if (selectedFilter) {
+                document.querySelector('.' + optionClassActive).classList.remove(optionClassActive);
+            }
             cur.classList.add(optionClassActive);
-            filterByParameter(parameterName, parameterID, filterBy)
+            updateFiltersCotainerWithActiveFilters(parameterName, parameterID, filterBy)
         })
     })
 }
@@ -91,23 +147,94 @@ registerToggeleActiveClassListener(DOMstrings.filterSize, DOMstrings.filterSizeS
 registerToggeleActiveClassListener(DOMstrings.filterFit, DOMstrings.filterFitSelected, 'fit');
 registerToggeleActiveClassListener(DOMstrings.filterColor, DOMstrings.filterColorSelected, 'color');
 
-//Filter by fit 
-const filterByParameter = (parameterName, parameterID, filterBy) => {
+//Filter Data By Parameter (fit, size, color)
+const updateFiltersCotainerWithActiveFilters = (parameterName, parameterID, filterBy) => {
     if (filterBy === 'fit') {
-        const filteredData = mockData.filter(cur => cur.fit === parameterName.toLowerCase())
-        renderData(filteredData)
+        filtersContainer.fit = parameterName.toLowerCase()
+        filterData()
     } else if (filterBy === 'size') {
-        const filteredData = mockData.filter(cur => cur.size.includes(parseFloat(parameterName)))
-        renderData(filteredData)
-    }
-    else if (filterBy === 'color') {
-        const filteredData = mockData.filter(cur => cur.color === parameterID)
-        noProductsFound(filteredData)
-        renderData(filteredData)
+        filtersContainer.size = parseFloat(parameterName)
+        filterData()
+    } else if (filterBy === 'color') {
+        filtersContainer.color = parameterID
+        filterData()
     }
 }
+
+//Price range filter
+const priceRange = document.getElementById('slider');
+noUiSlider.create(priceRange, {
+    start: [99, 300],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 1000
+    }
+});
+
+//Update prices in UI
+priceRange.noUiSlider.on('update', (values) => {
+    document.querySelector(DOMstrings.lowerPriceInRange).textContent = `$${parseInt(values[0])}`
+    document.querySelector(DOMstrings.higherPriceInRange).textContent = `$${parseInt(values[1])}`
+});
+
+//Update filtersContainer with current price range 
+priceRange.noUiSlider.on('end', (values) => {
+    filtersContainer.price = values
+    filterData()
+})
+
+//Function for pagination and noproducts found toggle
+const noProductsFound = (filteredData) => {
+    if (filteredData.length === 0) {
+        document.querySelector(DOMstrings.emptyFilter).style.display = 'flex'
+        document.querySelector(DOMstrings.paginationContainer).style.display = 'none'
+    } else {
+        document.querySelector(DOMstrings.emptyFilter).style.display = 'none'
+        document.querySelector(DOMstrings.paginationContainer).style.display = 'flex'
+    }
+}
+
+//Clean filters
+document.querySelector(DOMstrings.cleanFilters).addEventListener('click', () => {
+    document.querySelector(DOMstrings.selectorOptionText).textContent = 'All products'
+    filtersContainer = { ...defaultFilters }
+    priceRange.noUiSlider.reset()
+    removeAllActiveClassesFromFilters()
+    filterData()
+})
+
+const removeAllActiveClassesFromFilters = () => {
+    const filterFitActive = document.querySelector('.' + DOMstrings.filterFitSelected)
+    const filterSizeActive = document.querySelector('.' + DOMstrings.filterSizeSelected)
+    const filterColorActive = document.querySelector('.' + DOMstrings.filterColorSelected)
+    if (filterFitActive) {
+        filterFitActive.classList.remove(DOMstrings.filterFitSelected)
+    }
+    if (filterSizeActive) {
+        filterSizeActive.classList.remove(DOMstrings.filterSizeSelected)
+    }
+    if (filterColorActive) {
+        filterColorActive.classList.remove(DOMstrings.filterColorSelected)
+    }
+}
+
 //Pagination
-registerToggeleActiveClassListener(DOMstrings.paginationLink, DOMstrings.paginationLinkActive)
+const registerActiveClassOnPagination = (optionClass, optionClassActive) => {
+    const filterOptions = document.querySelectorAll(optionClass);
+    filterOptions.forEach(cur => {
+        cur.addEventListener('click', function () {
+            const parameterName = cur.textContent
+            const selectedPage = document.querySelector('.' + optionClassActive)
+            if (selectedPage) {
+                document.querySelector('.' + optionClassActive).classList.remove(optionClassActive);
+            }
+            cur.classList.add(optionClassActive);
+        })
+    })
+}
+
+registerActiveClassOnPagination(DOMstrings.paginationLink, DOMstrings.paginationLinkActive)
 const paginationPageChange = () => {
     const arrowBack = document.querySelector(DOMstrings.arrowBack);
     const arrowNext = document.querySelector(DOMstrings.arrowNext);
@@ -137,46 +264,6 @@ const paginationPageChange = () => {
 };
 
 paginationPageChange();
-
-//Price range
-const slider = document.getElementById('slider');
-noUiSlider.create(slider, {
-    start: [99, 300],
-    connect: true,
-    range: {
-        'min': 0,
-        'max': 1000
-    }
-});
-
-slider.noUiSlider.on('update', (values) => {
-    document.querySelector(DOMstrings.lowerPriceInRange).textContent = `$${parseInt(values[0])}`
-    document.querySelector(DOMstrings.higherPriceInRange).textContent = `$${parseInt(values[1])}`
-});
-
-slider.noUiSlider.on('end', (values) => {
-    const filteredData = mockData.filter(cur => cur.price >= (parseInt(values[0])) && cur.price <= (parseInt(values[1])))
-    renderData(filteredData)
-    noProductsFound(filteredData)
-
-})
-
-const noProductsFound = (filteredData) => {
-    if (filteredData.length === 0) {
-        document.querySelector(DOMstrings.emptyFilter).style.display = 'flex'
-        document.querySelector(DOMstrings.paginationContainer).style.display = 'none'
-    } else {
-        document.querySelector(DOMstrings.emptyFilter).style.display = 'none'
-        document.querySelector(DOMstrings.paginationContainer).style.display = 'flex'
-    }
-
-}
-
-//Clean filters
-document.querySelector(DOMstrings.cleanFilters).addEventListener('click', () => {
-    renderData(mockData)
-
-})
 
 
 

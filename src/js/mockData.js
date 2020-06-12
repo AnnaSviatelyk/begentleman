@@ -4,7 +4,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 190,
         fit: 'classic',
-        color: 'lightGrey',
+        color: 'black',
         image: 'trousers-1.svg',
         category: 'Trousers',
         size: [38, 40, 42, 44, 46]
@@ -90,7 +90,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 190,
         fit: 'classic',
-        color: 'grey',
+        color: 'black',
         image: 'trousers-1.svg',
         category: 'Trousers',
         size: [36, 38, 42, 44, 46]
