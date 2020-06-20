@@ -99,14 +99,19 @@
   &__element {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 
-    &:nth-of-type(3) {
+    &--fabric-container {
       flex-direction: column;
       align-items: flex-start;
     }
 
-    &:nth-of-type(4) {
+    &--color-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--sizes-container {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -134,11 +139,15 @@
     letter-spacing: 0.32px;
 
     color: #333333;
+    margin-top: 12px;
+
+    &--code {
+      margin-top: 0;
+    }
   }
 
   &__colors {
     display: flex;
-
     margin-top: 12px;
   }
 
