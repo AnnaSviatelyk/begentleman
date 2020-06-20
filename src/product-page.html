@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link href="main.css" rel='stylesheet'>
     <title>Be Gentleman</title>
 </head>
 
@@ -33,17 +34,24 @@
 
     <section class="product-description">
         <div class="product-description__container">
-            <div class="product-description__images">
-                <div class="product-description__image-main"></div>
-                <div class="product-description__more-images">
-                    <div class="product-description__more-image"></div>
-                    <div class="product-description__more-image"></div>
-                    <div class="product-description__more-image"></div>
-                </div>
+            <div class="product-description__images" id="slider">
+
             </div>
 
             <div class="product-description__product-info">
-                <span class="product-description__breadcrumbs">Home/Clothes/Shirts</span>
+                <div class="breadcrumbs">
+                    <a href="index.html" class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Home</a>
+                    <span class="breadcrumbs__divider">/</span>
+                    <a href="shop-page.html" class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">All
+                        products</a>
+                    <span class="breadcrumbs__divider">/</span>
+                    <a href="shop-page.html"
+                        class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Shirts</a>
+                    <span class="breadcrumbs__divider">/</span>
+                    <a href="product-page.html"
+                        class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Cotton melange shirt</a>
+                </div>
+
                 <h2 class="section-title product-description__section-title">Cotton melange shirt</h2>
                 <div class="product-description__element">
                     <span class="product-description__category">Product code: </span>
@@ -99,7 +107,12 @@
             </div>
         </div>
         </div>
-        <img class="product-description__arrows" src="images/arrows.svg">
+        <div class="product-description__arrows">
+            <img class="product-description__arrow product-description__arrow--left"
+                src="images/flip-image-arrow-left.svg">
+            <img class="product-description__arrow product-description__arrow--right"
+                src="images/flip-image-arrow-right.svg">
+        </div>
     </section>
 
     <section class="additional-products">
@@ -282,6 +295,26 @@
             <img src="images/visa (2).svg">
         </div>
     </section>
+    <div class="vertical-menu">
+        <!-- <div class="vertical-menu__close-menu-icon"></div> -->
+        <ul>
+            <li class="vertical-menu__navigation"><a href="index.html" class="vertical-menu__navigation-link">Main</a>
+            </li>
+            <li class="vertical-menu__navigation-link"><a href="shop-page.html"
+                    class="vertical-menu__navigation-link">All
+                    products</a> </li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Coats and
+                Jackets</li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Shirts</li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Trousers</li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Shoes</li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Underwear </li>
+            <li><a href="#" class="vertical-menu__navigation-link">Store locator</a></li>
+            <li><a href="#" class="vertical-menu__navigation-link">My account</a></li>
+            <li><a href="#" class="vertical-menu__navigation-link">Contact us</a></li>
+        </ul>
+    </div>
+    <script src="productPage.js"></script>
 
 
 </body>

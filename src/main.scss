@@ -4,9 +4,9 @@
 @import "./scss/button";
 @import "./scss/footer";
 @import "./scss/product-page";
-@import "./scss/shop-page.scss";
+@import "./scss/shop-page";
 @import "./scss/dropdown";
-
+@import "./scss/burger-menu";
 * {
   margin: 0;
   padding: 0;
@@ -50,4 +50,44 @@ body {
   color: #ffffff;
 
   margin-bottom: 16px;
+}
+
+.breadcrumbs {
+  display: flex;
+
+  &__divider {
+    color: #33333365;
+  }
+
+  &__breadcrumb {
+    display: block;
+
+    margin-left: 157px;
+    margin-bottom: 32px;
+
+    font-family: "Lato";
+    font-size: 14px;
+    font-weight: 300;
+
+    line-height: 1.21;
+    letter-spacing: 0.28px;
+
+    text-decoration: none;
+
+    color: #33333365;
+    transition: all 0.3s;
+
+    &:last-child {
+      margin-left: 1px;
+    }
+
+    &:hover {
+      color: #333333;
+    }
+
+    &--product-page {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
 }

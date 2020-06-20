@@ -1,0 +1,38 @@
+.vertical-menu {
+    display: none;
+    position: fixed;
+    padding: 230px 48px;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #00000099;
+    backdrop-filter: blur(12px);
+
+    li {
+        margin-bottom: 16px;
+    }
+
+    &__navigation-link {
+        font-size: 14px;
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        transition: all 0.3s;
+
+        &--lower-level {
+            //margin-bottom: 10px;
+            margin-left: 10px;
+            font-size: 12px;
+
+            cursor: pointer;
+        }
+
+        &:hover {
+            opacity: 80%;
+        }
+    }
+}

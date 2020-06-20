@@ -10,7 +10,11 @@ let outputFilename = '[name].js';
 
 module.exports = {
     mode: 'production',
-    entry: './src/main.js',
+    entry: {
+        main: './src/main.js',
+        shopPage: './src/shopPage.js',
+        productPage: './src/productPage.js'
+    },
     devtool: false,
     output: {
         filename: outputFilename,
@@ -24,16 +28,19 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: './src/index.html',
+            inject: false,
         }),
         new HtmlWebpackPlugin({
             filename: 'product-page.html',
-            template: './src/product-page.html'
+            template: './src/product-page.html',
+            inject: false,
         }),
 
         new HtmlWebpackPlugin({
             filename: 'shop-page.html',
-            template: './src/shop-page.html'
+            template: './src/shop-page.html',
+            inject: false,
         }),
 
         new MiniCssExtractPlugin({

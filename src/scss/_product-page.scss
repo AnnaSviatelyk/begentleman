@@ -6,8 +6,55 @@
   margin-bottom: 80px;
 }
 
+.breadcrumbs {
+  display: flex;
+
+  &__divider {
+    color: #33333365;
+  }
+
+  &__breadcrumb {
+    display: block;
+
+    margin-left: 0;
+
+    font-family: "Lato";
+    font-size: 14px;
+    font-weight: 300;
+
+    line-height: 1.21;
+    letter-spacing: 0.28px;
+
+    text-decoration: none;
+
+    color: #33333365;
+    transition: all 0.3s;
+
+    &:last-child {
+      margin-left: 1px;
+    }
+
+    &:hover {
+      color: #333333;
+    }
+  }
+}
+
 .product-description {
   margin: 0 157px 120px 157px;
+
+  &__arrow {
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    &--left {
+      margin-right: 10px;
+    }
+  }
 
   &__container {
     display: flex;
@@ -24,7 +71,6 @@
     width: 545px;
     height: 693px;
 
-    background-image: url(images/product-desc-1.svg);
     background-size: cover;
 
     margin-bottom: 24px;
@@ -32,35 +78,17 @@
 
   &__more-images {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 32px;
   }
 
-  &__more-image {
+  &__more-images-item {
     width: 169px;
-    height: 179px;
+    height: 183px;
 
-    margin-right: 19px;
-
-    background-image: url(images/product-desc-2.svg);
-
-    &:nth-child(2) {
-      background-image: url(images/product-decs-3.svg);
+    &--selected {
+      display: none;
     }
-
-    &:last-child {
-      background-image: url(images/product-desc-4.svg);
-      margin-right: 0;
-    }
-  }
-
-  &__breadcrumbs {
-    font-family: "Lato";
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.21;
-    letter-spacing: 0.28px;
-
-    color: #33333365;
   }
 
   &__section-title {
@@ -120,8 +148,10 @@
 
     border-radius: 50%;
     background-color: #dadfe4;
+    cursor: pointer;
 
     margin-right: 8px;
+    transition: all 0.3s;
 
     &:nth-child(2) {
       background-color: #073d5c;
@@ -130,6 +160,13 @@
     &:nth-child(3) {
       background-color: #2e2e2e;
     }
+  }
+
+  &__color:hover:not(.product-description__color--active) {
+    transform: scale(0.9);
+  }
+  &__color--active {
+    transform: scale(1.1);
   }
 
   &__sizes {
@@ -141,6 +178,7 @@
   &__size {
     width: 42px;
     height: 29px;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
@@ -158,6 +196,17 @@
     color: #333333;
 
     margin-right: 12px;
+
+    transition: all 0.3s;
+
+    &:hover:not(.product-description__size--active) {
+      transform: scale(0.9);
+    }
+
+    &--active {
+      background-color: #333;
+      color: #ffffff;
+    }
   }
 
   &__view-sizeguide {

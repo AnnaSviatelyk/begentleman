@@ -19,7 +19,18 @@ export const DOMstrings = {
     higherPriceInRange: '.filter__price-number--higher',
     emptyFilter: '.empty-filter-result',
     paginationContainer: '.pagination',
-    cleanFilters: '.filter__clean-filters'
+    cleanFilters: '.filter__clean-filters',
+    productSize: '.product-description__size',
+    productColor: '.product-description__color',
+    productSizeSelected: 'product-description__size--active',
+    productColorSelected: 'product-description__color--active',
+    burgerMenuIcon: '.hero-area__burger-menu',
+    burgerMenuContainer: '.vertical-menu',
+    productImagesOptions: '.product-description__more-images-item',
+    flippingImageArrowLeft: '.product-description__arrow--left',
+    flippingImageArrowRight: '.product-description__arrow--right',
+    imagesContainer: '#slider'
+
 
 }
 
