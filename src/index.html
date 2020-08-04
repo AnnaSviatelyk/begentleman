@@ -12,24 +12,30 @@
 
 <body>
     <section class="hero-area">
-        <img src="images/logo.svg" class="hero-area__logo" alt="logo">
-        <div class="hero-area__icons">
-            <a href="#" class="hero-area__icon"><img src="images/search.svg" alt="search icon"></a>
-            <a href="#" class="hero-area__icon"><img src="images/location.svg" alt="pin icon"></a>
-            <a href="#" class="hero-area__icon"><img src="images/user.svg" alt="user icon"></a>
-            <a href="#" class="hero-area__icon"><img src="images/bag.svg" alt="bag icon"></a>
-            <span class="hero-area__cart-amount">(0)</span>
+        <img src="images/logo.svg" class="navigation__logo" alt="logo">
+        <div class="navigation__nav-container">
+            <svg class="navigation__burger-menu" xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 32 32">
+                <g id="Group_15" data-name="Group 15" transform="translate(-532 -1100)">
+                    <path d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#fff" />
+                    <path class="hero-area__burger-menu-middle-line" d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"
+                        transform="translate(532 1100)" fill="#fff" />
+                    <path d="M28,24H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#fff" />
+                    <rect width="32" height="32" transform="translate(532 1100)" fill="none" />
+                </g>
+            </svg>
+            <div class="navigation__icons">
+                <a href="#" class="navigation__icon"><img src="images/search.svg" class="navigation__icon--img"
+                        alt="search icon"></a>
+                <a href="#" class="navigation__icon"><img src="images/location.svg" class="navigation__icon--img"
+                        alt="pin icon"></a>
+                <a href="#" class="navigation__icon"><img src="images/user.svg" class="navigation__icon--img"
+                        alt="user icon"></a>
+                <a href="#" class="navigation__icon"><img src="images/bag.svg" class="navigation__icon--img"
+                        alt="bag icon"></a>
+                <span class="navigation__cart-amount">(0)</span>
+            </div>
+
         </div>
-        <svg class="hero-area__burger-menu" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-            viewBox="0 0 32 32">
-            <g id="Group_15" data-name="Group 15" transform="translate(-532 -1100)">
-                <path d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#fff" />
-                <path class="hero-area__burger-menu-middle-line" d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"
-                    transform="translate(532 1100)" fill="#fff" />
-                <path d="M28,24H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#fff" />
-                <rect width="32" height="32" transform="translate(532 1100)" fill="none" />
-            </g>
-        </svg>
         <div class="hero-area__text-container">
             <h3 class="hero-area__sub-title">New collection</h3>
             <h1 class="hero-area__title">Spring-summer 2020</h1>
@@ -46,8 +52,8 @@
         </div>
 
         <div class="lookbook__container-with-title">
-            <h2 class="section-title">Express your free spirit</h2>
-            <h2 class="section-title section-title--vertical">Spring-summer collection 2020</h2>
+            <h2 class="section-title lookbook__section-title">Express your free spirit</h2>
+            <h2 class="section-title section-title--vertical lookbook__section-title">Spring-summer collection 2020</h2>
             <img src="images/lookbook-image-1-min.png">
         </div>
     </section>
@@ -73,22 +79,26 @@
         <h2 class="section-title top-picks__section-title">Top picks</h2>
         <div class="top-picks__products-container">
             <a class="top-picks__product" href="product-page.html">
-                <div class="top-picks__product-image"></div>
+                <div class="top-picks__product-image-container">
+                    <div class="top-picks__product-image"></div>
+                </div>
                 <div class="top-picks__product-description">
                     <span>Shirts</span>
                     <h4 class="product-heading top-picks__product-heading">Cotton Melange Shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+                    <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
                         malesuada.</p>
                     <span>$243</span>
                 </div>
             </a>
 
             <a class="top-picks__product" href="product-page.html">
-                <div class="top-picks__product-image"></div>
+                <div class="top-picks__product-image-container">
+                    <div class="top-picks__product-image"></div>
+                </div>
                 <div class="top-picks__product-description">
                     <span>Coats</span>
                     <h4 class="product-heading top-picks__product-heading">Suede Bomber Jacket</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+                    <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
                         malesuada.</p>
                     <span>$423</span>
                 </div>
@@ -96,11 +106,13 @@
 
 
             <a class="top-picks__product" href="product-page.html">
-                <div class="top-picks__product-image"></div>
+                <div class="top-picks__product-image-container">
+                    <div class="top-picks__product-image"></div>
+                </div>
                 <div class="top-picks__product-description">
                     <span>Shirts</span>
                     <h4 class="product-heading top-picks__product-heading">Check cotton poplin shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+                    <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
                         malesuada.</p>
                     <span>$182</span>
                 </div>
@@ -108,11 +120,13 @@
 
 
             <a class="top-picks__product" href="product-page.html">
-                <div class="top-picks__product-image"></div>
+                <div class="top-picks__product-image-container">
+                    <div class="top-picks__product-image"></div>
+                </div>
                 <div class="top-picks__product-description">
                     <span>Shirts</span>
                     <h4 class="product-heading top-picks__product-heading">Stripe detail cotton shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+                    <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
                         malesuada.</p>
                     <span>$99</span>
                 </div>

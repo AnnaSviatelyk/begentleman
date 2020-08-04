@@ -11,11 +11,11 @@ export default [
     },
 
     {
-        title: 'Leather Travel Bag',
+        title: 'Black Leather Travel Bag',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 121,
         color: 'black',
-        image: 'bag-1.svg',
+        image: 'bag-1.png',
         category: 'Accessories',
         size: []
     },
@@ -32,7 +32,7 @@ export default [
     },
 
     {
-        title: 'Cotton Melange Shirt',
+        title: 'Flat Cotton Melange Shirt',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 182,
         fit: 'slim',
@@ -43,7 +43,7 @@ export default [
     },
 
     {
-        title: 'Suede Bomber Jacket',
+        title: 'Faux-Suede Bomber Jacket',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 423,
         fit: 'tailored',
@@ -76,11 +76,11 @@ export default [
     },
 
     {
-        title: 'Leather Travel Bag',
+        title: 'Black Leather Travel Bag',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.',
         price: 121,
         color: 'black',
-        image: 'bag-1.svg',
+        image: 'bag-1.png',
         category: 'Accessories',
         size: []
     },

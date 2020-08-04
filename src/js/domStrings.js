@@ -24,7 +24,7 @@ export const DOMstrings = {
     productColor: '.product-description__color',
     productSizeSelected: 'product-description__size--active',
     productColorSelected: 'product-description__color--active',
-    burgerMenuIcon: '.hero-area__burger-menu',
+    burgerMenuIcon: '.navigation__burger-menu',
     burgerMenuContainer: '.vertical-menu',
     productImagesOptions: '.product-description__more-images-item',
     flippingImageArrowLeft: '.product-description__arrow--left',

@@ -1,5 +1,5 @@
-@import "./scss/variables";
-@import "./scss/nav";
+@import "./scss/mixins/variables";
+@import "./scss/mixins/media-queries";
 @import "./scss/home";
 @import "./scss/button";
 @import "./scss/footer";
@@ -7,6 +7,9 @@
 @import "./scss/shop-page";
 @import "./scss/dropdown";
 @import "./scss/burger-menu";
+@import "./scss/navigation";
+@import "./scss/breadcrumbs";
+
 * {
   margin: 0;
   padding: 0;
@@ -52,42 +55,41 @@ body {
   margin-bottom: 16px;
 }
 
-.breadcrumbs {
-  display: flex;
+@include desktop-small {
+  .section-title {
+    font-size: 26px;
 
-  &__divider {
-    color: #33333365;
+    &--vertical {
+      transform: rotate(90deg);
+    }
   }
 
-  &__breadcrumb {
-    display: block;
+  .product-heading {
+    font-size: 20px;
+  }
+}
 
-    margin-left: 157px;
-    margin-bottom: 32px;
+@include desktop-medium {
+  .section-title {
+    font-size: 32px;
 
-    font-family: "Lato";
-    font-size: 14px;
-    font-weight: 300;
-
-    line-height: 1.21;
-    letter-spacing: 0.28px;
-
-    text-decoration: none;
-
-    color: #33333365;
-    transition: all 0.3s;
-
-    &:last-child {
-      margin-left: 1px;
+    &--vertical {
+      transform: rotate(90deg);
     }
+  }
 
-    &:hover {
-      color: #333333;
-    }
+  .product-heading {
+    font-size: 18px;
+  }
+}
 
-    &--product-page {
-      margin-left: 0;
-      margin-bottom: 0;
-    }
+@include desktop-large {
+  .section-title {
+    font-family: Lora;
+    font-size: 40px;
+  }
+
+  .product-heading {
+    font-size: 20px;
   }
 }

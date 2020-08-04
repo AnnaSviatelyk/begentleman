@@ -8,17 +8,17 @@
     align-items: center;
     justify-content: center;
 
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
     font-size: 16px;
     color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
-    
+
     overflow: hidden;
 
-span {
-    transition: color .3s;
-}
+    span {
+        transition: color 0.3s;
+    }
 
     &::after {
         content: "";
@@ -34,30 +34,25 @@ span {
         transform: translate(-50%, -50%) rotate(45deg);
         transition: all 0.3s;
         background-color: white;
-
     }
-
 
     &:hover {
         span {
             color: #333333;
         }
 
-
         &::after {
             height: 135px;
             opacity: 1;
         }
     }
-    
 }
 
-.button--black{
+.button--black {
     background-color: #ffffff00;
-    border: solid 1.5px #333333; 
+    border: solid 1.5px #333333;
     color: #333333;
     margin: 65px auto 0 auto;
-
 
     &::after {
         background-color: #333333;
@@ -69,7 +64,6 @@ span {
         }
     }
 }
-
 
 .button-blurred {
     display: flex;
@@ -84,7 +78,7 @@ span {
     backdrop-filter: blur(4px);
     background-color: rgba(54, 54, 54, 0.2);
 
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.1s;
@@ -103,7 +97,34 @@ span {
         font-size: 14px;
 
         margin-top: 219px;
-        margin-bottom: 32px;
     }
+}
 
+@include desktop-small {
+    .button-blurred {
+        margin: 146px auto;
+    }
+}
+
+@include desktop-medium {
+    .button-blurred {
+        margin: 219px auto;
+    }
+}
+
+@include desktop-large {
+    .button-blurred {
+        width: 200px;
+        height: 65px;
+
+        font-size: 18px;
+
+        &--blog {
+            width: 216px;
+            height: 60px;
+            font-size: 18px;
+
+            margin-top: 265px;
+        }
+    }
 }

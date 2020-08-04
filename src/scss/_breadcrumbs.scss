@@ -1,0 +1,57 @@
+.breadcrumbs {
+    display: flex;
+
+    &__divider {
+        color: #33333365;
+    }
+
+    &__breadcrumb {
+        margin-bottom: 32px;
+
+        font-family: "Lato";
+        font-size: 14px;
+        font-weight: 300;
+
+        line-height: 1.21;
+        letter-spacing: 0.28px;
+
+        text-decoration: none;
+
+        color: #33333365;
+        transition: all 0.3s;
+
+        &:last-child {
+            margin-left: 1px;
+        }
+
+        &:hover {
+            color: #333333;
+        }
+
+        &--product-page {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include desktop-small {
+    .breadcrumbs {
+        width: 900px;
+        margin: 0 auto;
+    }
+}
+
+@include desktop-medium {
+    .breadcrumbs {
+        width: 1126px;
+        margin: 0 auto;
+    }
+}
+
+@include desktop-large {
+    .breadcrumbs {
+        width: 1300px;
+        margin: 0 auto;
+    }
+}

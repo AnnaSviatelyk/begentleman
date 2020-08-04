@@ -23,15 +23,19 @@ const renderData = (array) => {
 }
 
 const getHtmlString = (product) => {
-    return (`<a class="all-products__product" href="product-page.html">
+    return (
+        `<a class="all-products__product" href="product-page.html">
+        <div class="all-products__product-image-container">
     <div class="all-products__product-image" style='background-image: url(${require('./images/' + product.image)})'></div>
+    </div>
     <div class="all-products__product-description">
         <span class="all-products__category">${product.category}</span>
         <h4 class="product-heading all-products__product-heading">${product.title}</h4>
         <p>${product.description}</p>
         <span class="all-products__product-price">$${product.price}</span>
     </div>
-</a>`)
+</a>`
+    )
 }
 
 renderData(mockData);

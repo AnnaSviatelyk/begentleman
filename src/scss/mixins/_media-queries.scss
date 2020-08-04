@@ -1,0 +1,26 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// @mixin tablet($min-width) {
+//     @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+//         @content;
+//     }
+// }
+
+@mixin desktop-large {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin desktop-medium {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin desktop-small {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

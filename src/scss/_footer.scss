@@ -2,12 +2,15 @@
     width: 100%;
     height: auto;
 
-    padding: 32px 157px 40px 157px;
+    padding-top: 32px;
+    padding-bottom: 40px;
     margin-bottom: 12px;
 
     background-color: #000000;
 
     &__navigation-columns {
+        width: 1126px;
+        margin: 0 auto;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -15,7 +18,7 @@
 
     &__navigation-column {
         li {
-            font-family: 'Lato', sans-serif;
+            font-family: "Lato", sans-serif;
             font-size: 14px;
             font-weight: 300;
             line-height: 1.29;
@@ -37,7 +40,7 @@
         p {
             width: 259px;
             color: #ffffff95;
-            
+
             font-family: Lato;
             font-size: 12px;
             font-weight: 300;
@@ -54,11 +57,10 @@
     }
 
     &__subscribe-form-enter-email {
-
         width: 183px;
         height: 24px;
 
-        font-family: 'Lato', sans-serif;
+        font-family: "Lato", sans-serif;
         font-size: 12px;
         font-weight: 300;
 
@@ -82,13 +84,13 @@
         font-weight: 300;
         line-height: 1.2;
         letter-spacing: 0.1px;
-        transition: .3s;
+        transition: 0.3s;
 
         background-color: #ffffff;
 
         width: 75px;
         height: 24px;
-        
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -102,7 +104,6 @@
 
         &:hover {
             background-color: #ffffff90;
-
         }
     }
 
@@ -116,18 +117,19 @@
             }
         }
 
-        img:hover  {
+        img:hover {
             transform: scale(1.1);
         }
     }
 }
 
 .copyright {
+    width: 1126px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin: 0 157px 14px 157px;
+    margin: 0 auto 14px auto;
 
     &__information {
         width: 585px;
@@ -136,7 +138,7 @@
 
         p {
             opacity: 0.64;
-            font-family: Lato;
+            font-family: "Lato", sans-serif;
             font-size: 12px;
             font-weight: normal;
             line-height: 1.25;
@@ -155,5 +157,43 @@
             }
         }
     }
+}
 
+@include desktop-small {
+    .footer {
+        &__navigation-columns {
+            width: 900px;
+        }
+    }
+
+    .copyright {
+        width: 900px;
+        &__information {
+            width: 500px;
+        }
+    }
+}
+
+@include desktop-medium {
+    .footer {
+        &__navigation-columns {
+            width: 1126px;
+        }
+    }
+
+    .copyright {
+        width: 1126px;
+    }
+}
+
+@include desktop-large {
+    .footer {
+        &__navigation-columns {
+            width: 1300px;
+        }
+    }
+
+    .copyright {
+        width: 1300px;
+    }
 }

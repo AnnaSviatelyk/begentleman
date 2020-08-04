@@ -1,0 +1,161 @@
+.navigation {
+    &--black {
+        height: 110px;
+        background-color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 24px;
+        display: flex;
+    }
+
+    &__nav-container {
+        width: 900px;
+        margin: 32px auto 0 auto;
+        position: relative;
+        align-content: center;
+    }
+
+    &__logo {
+        height: 64px;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 17px;
+        user-select: none;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+
+    &__cart-amount {
+        font-size: 14px;
+        color: #ffffff;
+        font-family: "Lora", serif;
+
+        &--black {
+            color: #333333;
+        }
+    }
+
+    &__icon {
+        &--img {
+            height: 20px;
+        }
+
+        &:link,
+        &:visited {
+            margin-right: 21px;
+            transition: scale 0.3s;
+
+            &:last-of-type {
+                margin-right: 12px;
+            }
+        }
+
+        &:hover,
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    &__burger-menu {
+        height: 28px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+
+        path {
+            transition: all 0.3s;
+        }
+
+        .hero-area__burger-menu-middle-line {
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            .hero-area__burger-menu-middle-line {
+                transform: translate(539px, 1100px);
+            }
+
+            path {
+                &:first-of-type,
+                &:last-of-type {
+                    transform: translate(525px, 1100px);
+                }
+            }
+        }
+    }
+}
+
+@include desktop-small {
+    .navigation {
+        &__nav-container {
+            width: 900px;
+        }
+
+        &__cart-amount {
+            font-size: 16px;
+        }
+
+        &__icon {
+            &--img {
+                height: 20px;
+            }
+        }
+
+        &__burger-menu {
+            height: 28px;
+        }
+    }
+}
+
+@include desktop-medium {
+    .navigation {
+        &--black {
+            margin-bottom: 40px;
+        }
+
+        &__nav-container {
+            width: 1126px;
+        }
+
+        &__cart-amount {
+            font-size: 16px;
+        }
+
+        &__icon {
+            &--img {
+                height: 24px;
+            }
+        }
+    }
+}
+
+@include desktop-large {
+    .navigation {
+        &__nav-container {
+            width: 1300px;
+            margin-top: 40px;
+        }
+
+        &__logo {
+            margin-top: 32px;
+        }
+
+        &__burger-menu {
+            height: 40px;
+        }
+
+        &__icon {
+            &--img {
+                height: 29px;
+            }
+        }
+    }
+}
