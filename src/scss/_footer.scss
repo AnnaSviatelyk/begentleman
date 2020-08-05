@@ -197,3 +197,40 @@
         width: 1300px;
     }
 }
+
+@include desktop-extra-large {
+    .footer {
+        &__navigation-columns {
+            width: 1500px;
+        }
+
+        &__navigation-column {
+            li {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            &__subscribe-form-enter-email {
+                font-size: 14px;
+            }
+
+            &__subscribe-form-button {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .copyright {
+        width: 1500px;
+
+        &__information {
+            width: 600px;
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}

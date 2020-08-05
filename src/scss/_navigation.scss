@@ -92,6 +92,13 @@
         }
     }
 }
+@include tablet-large {
+    .navigation {
+        &__nav-container {
+            width: 720px;
+        }
+    }
+}
 
 @include desktop-small {
     .navigation {
@@ -145,7 +152,8 @@
         }
 
         &__logo {
-            margin-top: 32px;
+            height: 68px;
+            margin-top: 18px;
         }
 
         &__burger-menu {
@@ -156,6 +164,19 @@
             &--img {
                 height: 29px;
             }
+        }
+    }
+}
+
+@include desktop-extra-large {
+    .navigation {
+        &__nav-container {
+            width: 1500px;
+        }
+
+        &__logo {
+            height: 72px;
+            margin-top: 15px;
         }
     }
 }

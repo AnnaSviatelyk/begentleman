@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
     <link href="main.css" rel='stylesheet'>
     <title>Be Gentleman</title>
@@ -47,14 +47,14 @@
 
     <section class="lookbook">
         <div class="lookbook__container-with-button">
-            <img src="images/lookbook-image-2-min.png">
+            <img class='lookbook__image' src="images/lookbook-image-2-min.png">
             <a href="shop-page.html" class="button button--black"><span>Shop now</span></a>
         </div>
 
         <div class="lookbook__container-with-title">
             <h2 class="section-title lookbook__section-title">Express your free spirit</h2>
             <h2 class="section-title section-title--vertical lookbook__section-title">Spring-summer collection 2020</h2>
-            <img src="images/lookbook-image-1-min.png">
+            <img class='lookbook__image' src="images/lookbook-image-1-min.png">
         </div>
     </section>
 
@@ -78,57 +78,61 @@
     <section class="top-picks">
         <h2 class="section-title top-picks__section-title">Top picks</h2>
         <div class="top-picks__products-container">
-            <a class="top-picks__product" href="product-page.html">
-                <div class="top-picks__product-image-container">
-                    <div class="top-picks__product-image"></div>
+            <a class="card" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
                 </div>
-                <div class="top-picks__product-description">
-                    <span>Shirts</span>
-                    <h4 class="product-heading top-picks__product-heading">Cotton Melange Shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Flat Cotton Melange Shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$243</span>
+                    <span class="card__price">$243</span>
                 </div>
             </a>
 
-            <a class="top-picks__product" href="product-page.html">
-                <div class="top-picks__product-image-container">
-                    <div class="top-picks__product-image"></div>
+            <a class="card" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
                 </div>
-                <div class="top-picks__product-description">
-                    <span>Coats</span>
-                    <h4 class="product-heading top-picks__product-heading">Suede Bomber Jacket</h4>
-                    <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+                <div class="card__info">
+                    <span class="card__category">Coats</span>
+                    <h4 class="card__heading">Faux-Suede Bomber Jacket</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$423</span>
-                </div>
-            </a>
-
-
-            <a class="top-picks__product" href="product-page.html">
-                <div class="top-picks__product-image-container">
-                    <div class="top-picks__product-image"></div>
-                </div>
-                <div class="top-picks__product-description">
-                    <span>Shirts</span>
-                    <h4 class="product-heading top-picks__product-heading">Check cotton poplin shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
-                        malesuada.</p>
-                    <span>$182</span>
+                    <span class='card__price'>$423</span>
                 </div>
             </a>
 
 
-            <a class="top-picks__product" href="product-page.html">
-                <div class="top-picks__product-image-container">
-                    <div class="top-picks__product-image"></div>
+            <a class="card" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
                 </div>
-                <div class="top-picks__product-description">
-                    <span>Shirts</span>
-                    <h4 class="product-heading top-picks__product-heading">Stripe detail cotton shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Check cotton poplin shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$99</span>
+                    <span class="card__price">$182</span>
+                </div>
+            </a>
+
+
+            <a class="card" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Stripe detail cotton shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class="card__price">$99</span>
                 </div>
             </a>
         </div>
@@ -141,23 +145,25 @@
             <div class="blog__articles-main-image"></div>
             <div class="blog__all-articles">
                 <div class="blog__main-article">
-                    <div class="blog__main-article-date">
-                        <span>2/02/2020</span>
-                        <span>by Adam Jameson</span>
+                    <div class="blog__main-article-date-and-author-container">
+                        <span class="blog__main-article-date">2/02/2020</span>
+                        <span class="blog__main-article-author">by Adam Jameson</span>
                     </div>
 
                     <h3 class="blog__main-article-title">Top 10 trends in wearing suits for 2020</h3>
-                    <p>Whether you work in an office where suits are the mandatory dress code, or you’re a sartorial
+                    <p class="blog__main-article-text-preview">Whether you work in an office where suits are the
+                        mandatory dress code, or you’re a sartorial
                         fellow who dresses up for dinner dates at the weekend, a suit is a staple of any modern man’s
                         wardrobe.</p>
-                    <p>Even if you work in casual office and your idea of getting dressed up at the…</p>
+                    <p class="blog__main-article-text-preview">Even if you work in casual office and your idea of
+                        getting dressed up at the…</p>
 
                     <div class="blog__main-article-read-more">
                         <a href="#" class="blog__main-article-read-more-link">
                             <span>Read more</span>
                             <img src="images/arrow.svg">
                         </a>
-                        <span>5 min read</span>
+                        <span class="blog__main-article-minutes-to-read">5 min read</span>
                     </div>
                 </div>
 

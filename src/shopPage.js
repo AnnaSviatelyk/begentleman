@@ -24,15 +24,15 @@ const renderData = (array) => {
 
 const getHtmlString = (product) => {
     return (
-        `<a class="all-products__product" href="product-page.html">
-        <div class="all-products__product-image-container">
-    <div class="all-products__product-image" style='background-image: url(${require('./images/' + product.image)})'></div>
+        `<a class="card card--shop-page" href="product-page.html">
+        <div class="card__image-container">
+    <div class="card__image" style='background-image: url(${require('./images/' + product.image)})'></div>
     </div>
-    <div class="all-products__product-description">
-        <span class="all-products__category">${product.category}</span>
-        <h4 class="product-heading all-products__product-heading">${product.title}</h4>
-        <p>${product.description}</p>
-        <span class="all-products__product-price">$${product.price}</span>
+    <div class="card__info">
+        <span class="card__category">${product.category}</span>
+        <h4 class="card__heading">${product.title}</h4>
+        <p class='card__description'>${product.description}</p>
+        <span class="card__price">$${product.price}</span>
     </div>
 </a>`
     )

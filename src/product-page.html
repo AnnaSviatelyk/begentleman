@@ -38,122 +38,130 @@
     </section>
 
     <section class="product-description">
-        <div class="product-description__container">
-            <div class="product-description__images" id="slider">
-
-            </div>
-
-            <div class="product-description__product-info">
-                <div class="breadcrumbs">
-                    <a href="index.html" class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Home</a>
-                    <span class="breadcrumbs__divider">/</span>
-                    <a href="shop-page.html" class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">All
-                        products</a>
-                    <span class="breadcrumbs__divider">/</span>
-                    <a href="shop-page.html"
-                        class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Shirts</a>
-                    <span class="breadcrumbs__divider">/</span>
-                    <a href="product-page.html"
-                        class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Cotton melange shirt</a>
-                </div>
-
-                <h2 class="section-title product-description__section-title">Cotton melange shirt</h2>
-                <div class="product-description__element">
-                    <span class="product-description__category">Product code: </span>
-                    <span class="product-description__meaning product-description__meaning--code">SB13247</span>
-                </div>
-                <div class="product-description__element product-description__element--fabric-container">
-                    <span class="product-description__category">Fabric:</span>
-                    <span class="product-description__meaning">Cotton</span>
-                </div>
-                <div class="product-description__element product-description__element--color-container">
-                    <span class="product-description__category">Color:</span>
-                    <div class="product-description__colors">
-                        <div class="product-description__color"></div>
-                        <div class="product-description__color"></div>
-                        <div class="product-description__color"></div>
-                    </div>
-                </div>
-
-                <div class="product-description__element product-description__element--sizes-container ">
-                    <span class="product-description__category">Size:</span>
-                    <div class="product-description__sizes">
-                        <div class="product-description__size">36</div>
-                        <div class="product-description__size">38</div>
-                        <div class="product-description__size">40</div>
-                        <div class="product-description__size">42</div>
-                        <div class="product-description__size">44</div>
-                        <div class="product-description__size">48</div>
-                    </div>
-                </div>
-
-                <div class="product-description__view-sizeguide">
-                    <img src="images/measuring.svg">
-                    <a href="#">View size guide</a>
-                </div>
-
-                <div class="product-description__divider"> </div>
-
-                <div class="product-description__text-description">
-                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum
-                        dolore eu fugiat nulla pariatur.</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.”</p>
-                </div>
-                <div class="product-description__buy">
-                    <span class="product-description__price">$243</span>
-                    <a href="#" class="button button--black product-description__button"><span>Add to cart</span></a>
-
-
-                </div>
+        <div style="display: flex; flex-direction: column">
+            <div class="product-description__images" id="slider"></div>
+            <div class="product-description__arrows">
+                <img class="product-description__arrow product-description__arrow--left"
+                    src="images/flip-image-arrow-left.svg">
+                <img class="product-description__arrow product-description__arrow--right"
+                    src="images/flip-image-arrow-right.svg">
             </div>
         </div>
+        <div class="product-description__product-info">
+            <div class="breadcrumbs breadcrumbs--product-page">
+                <a href="index.html" class="breadcrumbs__breadcrumb">Home</a>
+                <span class="breadcrumbs__divider">/</span>
+                <a href="shop-page.html" class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">All
+                    products</a>
+                <span class="breadcrumbs__divider">/</span>
+                <a href="shop-page.html"
+                    class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Shirts</a>
+                <span class="breadcrumbs__divider">/</span>
+                <a href="product-page.html" class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Cotton
+                    melange shirt</a>
+            </div>
+
+            <h2 class="section-title">Cotton melange shirt</h2>
+            <div class="product-description__element">
+                <span class="product-description__category">Product code: </span>
+                <span class="product-description__meaning product-description__meaning--code">SB13247</span>
+            </div>
+            <div class="product-description__element product-description__element--column">
+                <span class="product-description__category">Fabric:</span>
+                <span class="product-description__meaning">Cotton</span>
+            </div>
+            <div class="product-description__element product-description__element--column">
+                <span class="product-description__category">Color:</span>
+                <div class="product-description__colors">
+                    <div class="product-description__color"></div>
+                    <div class="product-description__color"></div>
+                    <div class="product-description__color"></div>
+                </div>
+            </div>
+
+            <div class="product-description__element product-description__element--column ">
+                <span class="product-description__category">Size:</span>
+                <div class="product-description__sizes">
+                    <div class="product-description__size">36</div>
+                    <div class="product-description__size">38</div>
+                    <div class="product-description__size">40</div>
+                    <div class="product-description__size">42</div>
+                    <div class="product-description__size">44</div>
+                    <div class="product-description__size">48</div>
+                </div>
+            </div>
+
+            <div class="product-description__view-sizeguide">
+                <img src="images/measuring.svg">
+                <a href="#">View size guide</a>
+            </div>
+
+            <div class="product-description__divider"> </div>
+
+            <div class="product-description__text-description">
+                <p class="product-description__text-description">“Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum
+                    dolore eu fugiat nulla pariatur.</p>
+                <p class="product-description__text-description">Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.”</p>
+            </div>
+            <div class="product-description__buy">
+                <span class="product-description__price">$243</span>
+                <a href="#" class="button button--black product-description__button"><span>Add to cart</span></a>
+            </div>
         </div>
-        <div class="product-description__arrows">
-            <img class="product-description__arrow product-description__arrow--left"
-                src="images/flip-image-arrow-left.svg">
-            <img class="product-description__arrow product-description__arrow--right"
-                src="images/flip-image-arrow-right.svg">
         </div>
     </section>
 
+
+
     <section class="additional-products">
-        <h2 class="section-title additional-products__section-title">This will look great with:</h2>
+        <h2 class="section-title">This will look great with:</h2>
         <div class="additional-products__products-container">
-            <a class="additional-products__product" href="#">
-                <div class="additional-products__product-image"></div>
-                <div class="additional-products__product-description">
-                    <span>Shirts</span>
-                    <h4 class="product-heading additional-products__product-heading">Cotton melange shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+            <a class="card card--additional-product" href="#">
+                <div class="card__image-container">
+                    <div class="card__image card__image--add-product"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Trousers</span>
+                    <h4 class="card__heading">Stretch Wool Chino Trousers</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$199</span>
+                    <span class='card__price'>$199</span>
                 </div>
             </a>
 
-            <a class="additional-products__product" href="#">
-                <div class="additional-products__product-image"></div>
-                <div class="additional-products__product-description">
-                    <span>Bags </span>
-                    <h4 class="product-heading additional-products__product-heading">Leather Travel Bag</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+            <a class="card card--additional-product" href="#">
+                <div class="card__image-container">
+                    <div class="card__image card__image--add-product"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Bags</span>
+                    <h4 class="card__heading">Black Leather Travel Bag</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor
+                        nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$121</span>
+                    <span class="card__price">$121</span>
                 </div>
             </a>
 
 
-            <a class="additional-products__product" href="#">
-                <div class="additional-products__product-image"></div>
-                <div class="additional-products__product-description">
-                    <span>Coats and Jackets</span>
-                    <h4 class="product-heading additional-products__product-heading">Zipped Water-Repellent Coat</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+            <a class="card card--additional-product" href="#">
+                <div class="card__image-container">
+                    <div class="card__image card__image--add-product"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Coats and Jackets</span>
+                    <h4 class="card__heading">Zipped Water-Repellent Coat</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor
+                        nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$424</span>
+                    <span class="card__price">$424</span>
                 </div>
             </a>
         </div>
@@ -162,53 +170,66 @@
     <section class="top-picks">
         <h2 class="section-title top-picks__section-title">Top picks</h2>
         <div class="top-picks__products-container">
-            <a class="top-picks__product" href="#">
-                <div class="top-picks__product-image"></div>
-                <div class="top-picks__product-description">
-                    <span>Shirts</span>
-                    <h4 class="product-heading top-picks__product-heading">Cotton Melange Shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+            <a class="card" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Flat Cotton Melange Shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$243</span>
+                    <span class="card__price">$243</span>
                 </div>
             </a>
 
-            <a class="top-picks__product" href="#">
-                <div class="top-picks__product-image"></div>
-                <div class="top-picks__product-description">
-                    <span>Coats</span>
-                    <h4 class="product-heading top-picks__product-heading">Suede Bomber Jacket</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+            <a class="card" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Coats</span>
+                    <h4 class="card__heading">Faux-Suede Bomber Jacket</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$423</span>
+                    <span class='card__price'>$423</span>
                 </div>
             </a>
 
 
-
-            <a class="top-picks__product" href="#">
-                <div class="top-picks__product-image"></div>
-                <div class="top-picks__product-description">
-                    <span>Shirts</span>
-                    <h4 class="product-heading top-picks__product-heading">Stripe detail cotton shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
-                        malesuada.</p>
-                    <span>$99</span>
+            <a class="card" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
                 </div>
-            </a>
-            <a class="top-picks__product" href="#">
-                <div class="top-picks__product-image"></div>
-                <div class="top-picks__product-description">
-                    <span>Shirts</span>
-                    <h4 class="product-heading top-picks__product-heading">Stripe detail cotton shirt</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Check cotton poplin shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
                         malesuada.</p>
-                    <span>$99</span>
+                    <span class="card__price">$182</span>
                 </div>
             </a>
 
+
+            <a class="card" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Stripe detail cotton shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class="card__price">$99</span>
+                </div>
+            </a>
         </div>
     </section>
+
     <footer class="footer">
         <div class="footer__navigation-columns">
             <div class="footer__navigation-column">

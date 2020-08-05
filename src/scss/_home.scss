@@ -1,19 +1,21 @@
 .hero-area {
   height: 100vh;
   width: 100%;
+  margin-bottom: 120px;
+
   overflow: auto;
 
   background-image: url(images/background-img-min.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
-
-  margin-bottom: 120px;
+  background-position: top;
 
   &__text-container {
     width: 700px;
     height: 280px;
+    padding: 30px 0 25px 0;
+
     backdrop-filter: blur(3px);
     background-color: #00000050;
 
@@ -25,34 +27,34 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 30px;
-    padding-bottom: 25px;
   }
 
   &__sub-title {
+    margin-bottom: 16px;
+
     font-family: "Lora", serif;
     font-size: 18px;
     font-weight: normal;
-    color: #ffffff90;
     text-transform: uppercase;
-
-    margin-bottom: 16px;
+    color: #ffffff90;
   }
 
   &__title {
+    margin-bottom: 15px;
+
     font-family: "Lora", serif;
     font-size: 32px;
     font-weight: normal;
-    color: #ffffff;
     text-transform: uppercase;
-
-    margin-bottom: 15px;
+    color: #ffffff;
   }
 
   &__description {
     width: 717px;
     height: 51px;
-    font-family: Lato;
+    margin-bottom: 30px;
+
+    font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
@@ -61,8 +63,6 @@
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-
-    margin-bottom: 30px;
   }
 }
 
@@ -74,27 +74,19 @@
   align-items: flex-start;
   justify-content: space-between;
 
-  &__container-with-button {
-    & img {
-      width: 425px;
-    }
+  &__image {
+    width: 425px;
   }
 
   &__container-with-title {
     position: relative;
     align-content: center;
 
-    & img {
-      width: 425px;
-    }
-
     .section-title {
-      margin-top: 43px;
-      margin-bottom: 40px;
+      margin: 43px 0 40px 0;
 
       &--vertical {
         position: absolute;
-        white-space: nowrap;
         top: 37%;
         right: -45%;
       }
@@ -103,11 +95,8 @@
 }
 
 .shop-categories {
-  margin: 0 auto 120px auto;
   width: 1126px;
-  &__section-title {
-    margin-bottom: 32px;
-  }
+  margin: 0 auto 120px auto;
 
   &__categories-container {
     display: flex;
@@ -115,10 +104,12 @@
   }
 
   &__category {
-    background-image: url(images/clothes-min.png);
-    background-size: cover;
     width: 364px;
     height: 256px;
+
+    background-image: url(images/clothes-min.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &:nth-child(2) {
       background-image: url(images/shoes.png);
@@ -128,119 +119,13 @@
       background-image: url(images/accessories-min.png);
     }
   }
-
-  &__button-blurred {
-    margin: 0 auto;
-  }
 }
 
 .top-picks {
-  width: 1126px;
   margin: 0 auto 120px auto;
-
-  &__section-title {
-    margin-bottom: 32px;
-  }
 
   &__products-container {
     display: flex;
-    justify-content: space-between;
-  }
-
-  &__product {
-    text-decoration: none;
-
-    &:hover {
-      .top-picks__product-image {
-        transform: scale(1.05) translateY(-9px);
-      }
-    }
-
-    &:nth-child(2) {
-      .top-picks__product-image {
-        background-image: url(images/product-2.svg);
-      }
-    }
-
-    &:nth-child(3) {
-      .top-picks__product-image {
-        background-image: url(images/product-3.svg);
-      }
-    }
-
-    &:last-child {
-      .top-picks__product-image {
-        background-image: url(images/product-4.svg);
-      }
-    }
-  }
-
-  &__product-image-container {
-    overflow: hidden;
-  }
-
-  &__product-image {
-    width: 270px;
-    height: 371px;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(images/product-1.svg);
-
-    transition: transform 0.3s;
-  }
-
-  &__product-heading {
-    margin-top: 6px;
-    margin-bottom: 12px;
-  }
-
-  &__product-description {
-    width: 270px;
-    height: auto;
-    padding: 24px 16px 24px 16px;
-
-    background-color: #ffffff;
-
-    span:first-of-type {
-      font-family: "Lato", sans-serif;
-      font-size: 14px;
-      font-weight: normal;
-      line-height: 1.5;
-      letter-spacing: 0.14px;
-
-      color: #33333350;
-    }
-
-    p {
-      width: 245px;
-      font-family: "Lato", sans-serif;
-      font-weight: 300;
-      line-height: 1.19;
-      letter-spacing: 0.16px;
-      color: #33333390;
-
-      margin-bottom: 5px;
-    }
-
-    span:last-of-type {
-      width: 71px;
-      height: 32px;
-
-      background-color: #333333;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-family: "Lato", sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-
-      color: #ffffff;
-
-      margin-left: 188px;
-    }
   }
 
   .button {
@@ -252,10 +137,6 @@
   width: 1126px;
   margin: 0 auto 120px auto;
 
-  &__section-title {
-    margin-bottom: 32px;
-  }
-
   &__articles-container {
     display: flex;
     justify-content: space-between;
@@ -265,6 +146,7 @@
   &__articles-main-image {
     width: 555px;
     height: 635px;
+
     background-image: url(images/article-main-image-min.png);
   }
 
@@ -279,73 +161,62 @@
     padding: 24px 16px 0 16px;
   }
 
-  &__main-article-date {
-    display: flex;
-    justify-content: space-between;
-
+  &__main-article-date-and-author-container {
     margin-bottom: 24px;
 
-    span {
-      font-family: "Lato", sans-serif;
-      font-size: 14px;
-      letter-spacing: 0.14px;
-      font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+  }
 
-      color: #33333350;
-    }
+  &__main-article-date,
+  &__main-article-author,
+  &__main-article-minutes-to-read {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.14px;
+    font-weight: 300;
+    color: #33333350;
   }
 
   &__main-article-title {
+    margin-bottom: 18px;
+
     font-family: "Lora", serif;
     font-size: 20px;
     font-weight: normal;
     line-height: 1.25;
     letter-spacing: 0.2px;
-
     text-transform: uppercase;
-
     color: #333333;
-
-    margin-bottom: 18px;
   }
 
-  p {
+  &__main-article-text-preview {
     font-family: "Lato", sans-serif;
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.16px;
     color: #333333;
-  }
 
-  p:first-of-type {
-    margin-bottom: 16px;
-  }
+    &:first-of-type {
+      margin-bottom: 16px;
+    }
 
-  p:last-of-type {
-    margin-bottom: 24px;
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
   }
 
   &__main-article-read-more {
+    margin-bottom: 49px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    margin-bottom: 49px;
-
-    span:last-child {
-      font-family: Lato;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1.21;
-      letter-spacing: 0.14px;
-
-      color: #33333350;
-    }
   }
 
   &__main-article-read-more-link {
     font-family: "Lato", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
 
     text-decoration: none;
@@ -376,51 +247,51 @@
     }
   }
 }
+@include tablet-small {
+}
 
-@include desktop-small {
+@include tablet-medium {
+}
+
+@include tablet-large {
   .hero-area {
     margin-bottom: 100px;
 
     &__text-container {
-      width: 700px;
-      height: 280px;
+      width: 650px;
+      height: 240px;
 
-      padding-top: 30px;
-      padding-bottom: 25px;
-    }
-
-    &__sub-title {
-      font-size: 18px;
+      padding-top: 24px;
+      padding-bottom: 20px;
     }
 
     &__title {
-      font-size: 32px;
-    }
-
-    &__description {
-      width: 717px;
-      height: 51px;
-      font-size: 14px;
+      font-size: 28px;
     }
 
     &__sub-title {
-      font-size: 18px;
-    }
-
-    &__title {
-      font-size: 32px;
+      font-size: 16px;
     }
 
     &__description {
-      width: 717px;
+      width: 600px;
       height: 51px;
+      margin-bottom: 16px;
       font-size: 14px;
     }
   }
 
   .lookbook {
-    width: 900px;
-    margin: 0 auto 100px auto;
+    width: 720px;
+    margin: 0 auto 80px auto;
+
+    &__section-title {
+      font-size: 22px !important;
+    }
+
+    &__image {
+      width: 350px;
+    }
 
     &__container-with-title {
       .section-title {
@@ -429,61 +300,25 @@
 
         &--vertical {
           top: 37%;
-          right: -48%;
+          right: -50%;
         }
       }
     }
   }
 
   .shop-categories {
-    width: 900px;
-    margin: 0 auto 100px auto;
+    width: 720px;
+    margin: 0 auto 80px auto;
 
     &__category {
-      width: 290px;
-      height: 210px;
+      width: 233px;
+      height: 176px;
     }
   }
 
   .top-picks {
-    width: 900px;
-    margin: 0 auto 100px auto;
-
-    &__section-title {
-      margin-bottom: 32px;
-    }
-
-    &__product-image {
-      width: 214px;
-      height: 290px;
-    }
-
-    &__product-description {
-      width: 214px;
-      padding: 16px 12px 16px 12px;
-
-      span:first-of-type {
-        font-size: 14px;
-      }
-
-      p {
-        font-size: 14px;
-        width: 194px;
-        margin-bottom: 8px;
-      }
-
-      span:last-of-type {
-        width: 64px;
-        height: 28px;
-
-        font-size: 14px;
-        margin-left: 144px;
-      }
-    }
-
-    .button {
-      margin-top: 40px;
-    }
+    margin: 0 auto 80px auto;
+    width: 720px;
   }
 
   .blog {
@@ -505,10 +340,10 @@
       padding: 16px 16px 0 16px;
     }
 
-    &__main-article-date {
-      span {
-        font-size: 14px;
-      }
+    &__main-article-date,
+    &__main-article-author,
+    &__main-article-minutes-to-read {
+      font-size: 14px;
     }
 
     &__main-article-title {
@@ -516,24 +351,12 @@
       margin-bottom: 18px;
     }
 
-    p {
+    &__main-article-text-preview {
       font-size: 14px;
-    }
-
-    p:first-of-type {
-      margin-bottom: 16px;
-    }
-
-    p:last-of-type {
-      margin-bottom: 24px;
     }
 
     &__main-article-read-more {
       margin-bottom: 26px;
-
-      span:last-child {
-        font-size: 12px;
-      }
     }
 
     &__main-article-read-more-link {
@@ -541,9 +364,119 @@
     }
 
     &__article-preview {
-      background-position: top;
       width: 214px;
-      height: 226px;
+      height: 245px;
+    }
+  }
+}
+
+@include desktop-small {
+  .hero-area {
+    &__text-container {
+      width: 700px;
+      height: 280px;
+
+      padding-top: 30px;
+      padding-bottom: 25px;
+    }
+
+    &__sub-title {
+      font-size: 18px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      width: 717px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .lookbook {
+    width: 900px;
+    margin: 0 auto 100px auto;
+
+    &__section-title {
+      font-size: 26px !important;
+    }
+
+    &__image {
+      width: 425px;
+    }
+
+    &__container-with-title {
+      .section-title {
+        &--vertical {
+          right: -48%;
+        }
+      }
+    }
+  }
+
+  .shop-categories {
+    width: 900px;
+    margin: 0 auto 100px auto;
+
+    &__category {
+      width: 290px;
+      height: 210px;
+    }
+  }
+
+  .top-picks {
+    margin: 0 auto 100px auto;
+    width: 900px;
+  }
+
+  .blog {
+    width: 900px;
+    margin: 0 auto 100px auto;
+
+    &__articles-main-image {
+      width: 442px;
+      height: 530px;
+      background-position: top;
+    }
+
+    &__all-articles {
+      width: 442px;
+      height: 530px;
+    }
+
+    &__main-article {
+      padding: 16px 16px 0 16px;
+    }
+
+    &__main-article-date,
+    &__main-article-author,
+    &__main-article-minutes-to-read {
+      font-size: 14px;
+    }
+
+    &__main-article-title {
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    &__main-article-text-preview {
+      font-size: 14px;
+    }
+
+    &__main-article-read-more {
+      margin-bottom: 26px;
+    }
+
+    &__main-article-read-more-link {
+      font-size: 12px;
+    }
+
+    &__article-preview {
+      width: 214px;
+      height: 245px;
+
+      background-position: top;
     }
   }
 }
@@ -586,19 +519,19 @@
     width: 1126px;
     margin: 0 auto 120px auto;
 
+    &__section-title {
+      font-size: 32px !important;
+    }
+
+    &__image {
+      width: 546px;
+    }
+
     &__container-with-button {
       margin-right: 35px;
-
-      & img {
-        width: 546px;
-      }
     }
 
     &__container-with-title {
-      & img {
-        width: 546px;
-      }
-
       .section-title {
         margin-top: 43px;
         margin-bottom: 40px;
@@ -613,6 +546,7 @@
 
   .shop-categories {
     width: 1126px;
+    margin: 0 auto 120px auto;
 
     &__category {
       width: 364px;
@@ -621,43 +555,13 @@
   }
 
   .top-picks {
+    margin: 0 auto 120px auto;
     width: 1126px;
-
-    &__product-image {
-      width: 270px;
-      height: 371px;
-    }
-
-    &__product-description {
-      width: 270px;
-      height: auto;
-      padding: 24px 16px 24px 16px;
-
-      span:first-of-type {
-        font-size: 14px;
-      }
-
-      p {
-        width: 245px;
-        margin-bottom: 5px;
-      }
-
-      span:last-of-type {
-        width: 71px;
-        height: 32px;
-
-        font-size: 16px;
-        margin-left: 188px;
-      }
-    }
-
-    .button {
-      margin-top: 40px;
-    }
   }
 
   .blog {
     width: 1126px;
+    margin: 0 auto 120px auto;
 
     &__articles-main-image {
       width: 555px;
@@ -673,50 +577,41 @@
       padding: 24px 16px 0 16px;
     }
 
-    &__main-article-date {
-      margin-bottom: 24px;
-
-      span {
-        font-size: 16px;
-      }
+    &__main-article-date,
+    &__main-article-author,
+    &__main-article-minutes-to-read {
+      font-size: 14px;
     }
 
     &__main-article-title {
       font-size: 20px;
-      margin-bottom: 18px;
     }
 
-    p {
+    &__main-article-text-preview {
       font-size: 16px;
     }
 
-    p:first-of-type {
-      margin-bottom: 16px;
-    }
-
-    p:last-of-type {
-      margin-bottom: 24px;
-    }
-
     &__main-article-read-more {
-      margin-bottom: 49px;
-
-      span:last-child {
-        font-size: 14px;
-      }
+      margin-bottom: 32px;
     }
 
     &__main-article-read-more-link {
-      font-size: 14px;
+      font-size: 16px;
+    }
 
-      span {
-        margin-right: 16px;
-      }
+    &__main-article-date,
+    &__main-article-author,
+    &__main-article-minutes-to-read {
+      font-size: 16px;
+    }
+
+    &__main-article-title {
+      font-size: 23px;
     }
 
     &__article-preview {
       width: 266px;
-      height: 300px;
+      height: 311px;
     }
   }
 }
@@ -752,28 +647,13 @@
       font-size: 36px !important;
     }
 
-    &__container-with-button {
-      margin-right: 0;
-
-      & img {
-        width: 620px;
-      }
-    }
-
-    &__container-with-title {
-      & img {
-        width: 620px;
-      }
+    &__image {
+      width: 622px;
     }
   }
 
   .shop-categories {
-    margin: 0 auto 120px auto;
     width: 1300px;
-
-    &__categories-container {
-      display: flex;
-    }
 
     &__category {
       background-image: url(images/clothes-min.png);
@@ -789,34 +669,6 @@
 
   .top-picks {
     width: 1300px;
-
-    &__product-image {
-      width: 307px;
-      height: 391px;
-    }
-
-    &__product-description {
-      width: 307px;
-
-      span:first-of-type {
-        font-size: 18px;
-      }
-
-      p {
-        width: 285px;
-        margin-bottom: 12px;
-
-        font-size: 18px;
-      }
-
-      span:last-of-type {
-        width: 80px;
-        height: 40px;
-        margin-left: 219px;
-
-        font-size: 18px;
-      }
-    }
   }
 
   .blog {
@@ -872,6 +724,86 @@
 
       background-repeat: no-repeat;
       background-size: cover;
+    }
+  }
+}
+
+@include desktop-extra-large {
+  .hero-area {
+    &__text-container {
+      width: 1126px;
+      height: 400px;
+      top: 50%;
+      padding-top: 60px;
+    }
+
+    &__sub-title {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    &__description {
+      font-size: 21px;
+      margin-bottom: 48px;
+    }
+  }
+
+  .lookbook {
+    width: 1500px;
+    &__section-title {
+      font-size: 40px !important;
+    }
+
+    &__image {
+      width: 711px;
+    }
+  }
+
+  .shop-categories {
+    margin: 0 auto 120px auto;
+    width: 1500px;
+
+    &__category {
+      width: 475px;
+      height: 310px;
+    }
+  }
+
+  .top-picks {
+    width: 1500px;
+  }
+
+  .blog {
+    width: 1500px;
+
+    &__articles-main-image {
+      width: 688px;
+      height: 726px;
+    }
+
+    &__all-articles {
+      width: 774px;
+      height: 726px;
+    }
+
+    &__main-article-date,
+    &__main-article-author,
+    &__main-article-minutes-to-read {
+      font-size: 18px;
+    }
+
+    &__main-article-title {
+      font-size: 28px;
+    }
+
+    &__article-preview {
+      width: 373px;
+      height: 385px;
     }
   }
 }

@@ -70,7 +70,7 @@
     align-items: center;
     justify-content: center;
 
-    margin: 179px auto;
+    margin: 179px auto 0 auto;
 
     width: 161px;
     height: 45px;
@@ -96,19 +96,52 @@
         text-align: center;
         font-size: 14px;
 
-        margin-top: 219px;
+        margin: 219px auto 0 auto;
+    }
+}
+
+@include tablet-large {
+    .button {
+        width: 155px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .button-blurred {
+        width: 156px;
+        height: 40px;
+        margin: 116px auto 0 auto;
+
+        font-size: 13px;
+
+        &--blog {
+            width: 180px;
+            margin-top: 176px;
+        }
     }
 }
 
 @include desktop-small {
     .button-blurred {
-        margin: 146px auto;
+        width: 161px;
+        height: 45px;
+        margin: 146px auto 0 auto;
+
+        &--blog {
+            width: 180px;
+            margin-top: 176px;
+        }
     }
 }
 
 @include desktop-medium {
     .button-blurred {
-        margin: 219px auto;
+        margin: 179px auto 0 auto;
+
+        &--blog {
+            width: 206px;
+            margin-top: 235px;
+        }
     }
 }
 
@@ -116,7 +149,6 @@
     .button-blurred {
         width: 200px;
         height: 65px;
-
         font-size: 18px;
 
         &--blog {
@@ -124,7 +156,20 @@
             height: 60px;
             font-size: 18px;
 
-            margin-top: 265px;
+            margin-top: 272px;
         }
+    }
+}
+
+@include desktop-extra-large {
+    .button {
+        width: 186px;
+        height: 64px;
+        font-size: 18px;
+    }
+    .button-blurred {
+        width: 220px;
+        height: 75px;
+        font-size: 18px;
     }
 }
