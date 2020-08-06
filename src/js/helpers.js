@@ -1,4 +1,7 @@
 
+import Swiper, { Pagination } from "swiper";
+Swiper.use([Pagination]);
+
 //Register active class
 export const registerActiveClass = (optionClass, optionClassActive) => {
     const filterOptions = document.querySelectorAll(optionClass);
@@ -37,3 +40,8 @@ export const initBurgerMenuClickListener = (menuIcon, menuContainer) => {
     document.addEventListener('click', (event) => closeMenu(event, icon, menu))
 
 }
+
+
+
+
+

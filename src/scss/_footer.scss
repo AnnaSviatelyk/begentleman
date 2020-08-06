@@ -8,6 +8,19 @@
 
     background-color: #000000;
 
+    &__title {
+        font-family: "Lora", serif;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.29;
+        letter-spacing: 0.14px;
+
+        text-transform: uppercase;
+        color: #ffffff;
+
+        margin-bottom: 16px;
+    }
+
     &__navigation-columns {
         width: 1126px;
         margin: 0 auto;
@@ -38,7 +51,6 @@
         }
 
         p {
-            width: 259px;
             color: #ffffff95;
 
             font-family: Lato;
@@ -159,10 +171,67 @@
     }
 }
 
+@include tablet-large {
+    .footer {
+        &__navigation-columns {
+            width: 720px;
+        }
+
+        &__title {
+            font-size: 11px;
+        }
+
+        &__navigation-column {
+            li {
+                font-size: 11px;
+            }
+
+            p {
+                width: 212px;
+                font-size: 11px;
+            }
+        }
+
+        &__subscribe-form-enter-email {
+            width: 150px;
+        }
+    }
+
+    .copyright {
+        width: 720px;
+        &__information {
+            width: 390px;
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
 @include desktop-small {
     .footer {
         &__navigation-columns {
             width: 900px;
+        }
+
+        &__title {
+            font-size: 14px;
+        }
+
+        &__navigation-column {
+            li {
+                font-size: 14px;
+            }
+
+            p {
+                width: 259px;
+                font-size: 12px;
+            }
+        }
+
+        &__subscribe-form-enter-email {
+            width: 183px;
         }
     }
 
@@ -170,6 +239,10 @@
         width: 900px;
         &__information {
             width: 500px;
+
+            p {
+                font-size: 12px;
+            }
         }
     }
 }

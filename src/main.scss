@@ -10,6 +10,8 @@
 @import "./scss/navigation";
 @import "./scss/breadcrumbs";
 @import "./scss/card";
+@import "../node_modules/swiper/swiper.scss";
+@import "../node_modules/swiper/components/pagination/pagination.scss";
 
 * {
   margin: 0;
@@ -35,18 +37,33 @@ body {
   }
 }
 
-.footer__title {
-  font-family: "Lora", serif;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.29;
-  letter-spacing: 0.14px;
-
-  text-transform: uppercase;
-  color: #ffffff;
-
-  margin-bottom: 16px;
+//Swiper styles
+.swiper-pagination {
+  position: static;
+  margin-top: 15px;
 }
+
+.swiper-slide {
+  flex-shrink: unset;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 56px;
+  left: 0;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #333333;
+}
+
 @include tablet-large {
   .section-title {
     margin-bottom: 24px;
@@ -55,6 +72,9 @@ body {
 }
 
 @include desktop-small {
+  .swiper-pagination {
+    display: none;
+  }
   .section-title {
     margin-bottom: 32px;
     font-size: 26px;
@@ -68,6 +88,9 @@ body {
 }
 
 @include desktop-large {
+  .swiper-pagination {
+    display: none !important;
+  }
   .section-title {
     font-size: 40px;
   }

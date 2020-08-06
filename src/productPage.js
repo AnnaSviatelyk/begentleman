@@ -1,6 +1,13 @@
 import './main.scss'
 import { DOMstrings } from './js/domStrings'
 import { initBurgerMenuClickListener } from './js/helpers'
+import { createSwiper } from './js/swiper'
+
+window.addEventListener('load', () => createSwiper('.swiper-add-products'))
+window.addEventListener('resize', () => createSwiper('.swiper-add-products'))
+
+window.addEventListener('load', () => createSwiper('.swiper-top-picks-product-page'))
+window.addEventListener('resize', () => createSwiper('.sswiper-top-picks-product-page'))
 
 //Toggle burger menu
 initBurgerMenuClickListener(DOMstrings.burgerMenuIcon, DOMstrings.burgerMenuContainer)

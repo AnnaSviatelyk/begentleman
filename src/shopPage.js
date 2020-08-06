@@ -5,6 +5,11 @@ import noUiSlider from 'nouislider'
 import 'nouislider/distribute/nouislider.css'
 import { registerActiveClass } from './js/helpers'
 import { initBurgerMenuClickListener } from './js/helpers'
+import { createSwiper } from './js/swiper'
+
+
+window.addEventListener('load', createSwiper)
+window.addEventListener('resize', createSwiper)
 
 initBurgerMenuClickListener(DOMstrings.burgerMenuIcon, DOMstrings.burgerMenuContainer)
 

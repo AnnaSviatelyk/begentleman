@@ -383,33 +383,29 @@
   display: none !important;
 }
 
+@include tablet-large {
+  .all-content {
+    width: 720px;
+  }
+
+  .filter {
+    margin-right: 24px;
+  }
+}
+
 @include desktop-small {
   .all-content {
     width: 900px;
   }
 
-  &__products-and-pagination-container {
-    width: 697px;
-  }
-
   .filter {
     margin-right: 40px;
-  }
-
-  .all-products {
-    &__products-container {
-      width: 697px;
-    }
   }
 }
 
 @include desktop-medium {
   .all-content {
     width: 1126px;
-  }
-
-  &__products-and-pagination-container {
-    width: 697px;
   }
 
   .filter {
