@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_15" data-name="Group 15" transform="translate(-532 -1100)">
+    <path id="svg_1" d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#fff"/>
+    <path id="svg_2" d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#fff"/>
+    <path id="svg_3" d="M28,24H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#fff"/>
+    <rect id="svg_4" width="32" height="32" transform="translate(532 1100)" fill="none"/>
+  </g>
+</svg>
