@@ -1,32 +1,46 @@
 .navigation {
     &--black {
-        height: 110px;
+        height: 69px;
+        margin-bottom: 16px;
+
         background-color: #ffffff;
-        margin-top: 0;
-        margin-bottom: 24px;
+
         display: flex;
+
+        .navigation {
+            &__logo {
+                margin-top: -7px;
+            }
+
+            &__nav-container {
+                margin: 16px auto 0 auto;
+            }
+        }
     }
 
     &__nav-container {
-        width: 900px;
+        width: 300px;
         margin: 32px auto 0 auto;
+
         position: relative;
         align-content: center;
     }
 
     &__logo {
-        height: 64px;
+        height: 44px;
         width: auto;
+        margin-top: -10px;
+
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 17px;
+        right: 0;
+
         user-select: none;
     }
 
     &__icons {
-        display: flex;
+        display: none;
         align-items: center;
+
         position: absolute;
         top: 5px;
         right: 0;
@@ -45,31 +59,26 @@
     &__icon {
         &--img {
             height: 20px;
-        }
-
-        &:link,
-        &:visited {
             margin-right: 21px;
-            transition: scale 0.3s;
-
-            &:last-of-type {
-                margin-right: 12px;
-            }
         }
 
-        &:hover,
-        &:active {
+        transition: scale 0.3s;
+
+        &:hover {
             transform: scale(0.9);
         }
     }
 
     &__burger-menu {
         height: 28px;
+
         position: absolute;
         top: 0;
         left: 0;
+
         cursor: pointer;
 
+        //Hover animation
         path {
             transition: all 0.3s;
         }
@@ -92,26 +101,85 @@
         }
     }
 }
-@include tablet-large {
+
+@include mobile-large {
     .navigation {
+        &--black {
+            .navigation {
+                &__nav-container {
+                    width: 390px;
+                }
+            }
+        }
+
         &__nav-container {
-            width: 720px;
+            width: 390px;
         }
     }
 }
 
-@include desktop-small {
+@include tablet-small {
     .navigation {
-        &__nav-container {
-            width: 900px;
+        &--black {
+            height: 80px;
+            margin-bottom: 24px;
+
+            background-color: #ffffff;
+
+            .navigation {
+                &__nav-container {
+                    width: 580px;
+                }
+            }
         }
 
-        &__cart-amount {
-            font-size: 16px;
+        &__nav-container {
+            width: 580px;
+        }
+
+        &__logo {
+            height: 56px;
+
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__icons {
+            display: flex;
         }
 
         &__icon {
             &--img {
+                margin-right: 12px;
+                height: 18px;
+            }
+        }
+
+        &__burger-menu {
+            height: 24px;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+@include tablet-large {
+    .navigation {
+        &--black {
+            .navigation {
+                &__nav-container {
+                    width: 720px;
+                }
+            }
+        }
+
+        &__nav-container {
+            width: 720px;
+        }
+
+        &__icon {
+            &--img {
+                margin-right: 21px;
                 height: 20px;
             }
         }
@@ -122,10 +190,36 @@
     }
 }
 
+@include desktop-small {
+    .navigation {
+        &--black {
+            .navigation {
+                &__nav-container {
+                    width: 900px;
+                }
+            }
+        }
+
+        &__nav-container {
+            width: 900px;
+        }
+
+        &__cart-amount {
+            font-size: 16px;
+        }
+    }
+}
+
 @include desktop-medium {
     .navigation {
         &--black {
             margin-bottom: 40px;
+
+            .navigation {
+                &__nav-container {
+                    width: 1126px;
+                }
+            }
         }
 
         &__nav-container {
@@ -141,11 +235,23 @@
                 height: 24px;
             }
         }
+
+        &__burger-menu {
+            height: 32px;
+        }
     }
 }
 
 @include desktop-large {
     .navigation {
+        &--black {
+            .navigation {
+                &__nav-container {
+                    width: 1300px;
+                }
+            }
+        }
+
         &__nav-container {
             width: 1300px;
             margin-top: 40px;

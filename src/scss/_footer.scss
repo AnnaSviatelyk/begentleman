@@ -1,38 +1,40 @@
 .footer {
     width: 100%;
     height: auto;
-
-    padding-top: 32px;
-    padding-bottom: 40px;
     margin-bottom: 12px;
+    padding: 32px 0 40px 0;
 
     background-color: #000000;
 
     &__title {
+        margin-bottom: 16px;
+
         font-family: "Lora", serif;
-        font-size: 14px;
+        font-size: 11px;
         font-weight: normal;
         line-height: 1.29;
         letter-spacing: 0.14px;
-
         text-transform: uppercase;
         color: #ffffff;
-
-        margin-bottom: 16px;
     }
 
     &__navigation-columns {
-        width: 1126px;
+        width: 300px;
         margin: 0 auto;
+
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: space-between;
     }
 
     &__navigation-column {
+        margin: 0 22px 16px 0;
+
         li {
+            margin-bottom: 12px;
+
             font-family: "Lato", sans-serif;
-            font-size: 14px;
+            font-size: 11px;
             font-weight: 300;
             line-height: 1.29;
             letter-spacing: 0.14px;
@@ -43,34 +45,39 @@
 
             list-style: none;
 
-            margin-bottom: 12px;
-
             &:hover {
                 color: #ffffff;
             }
         }
 
         p {
-            color: #ffffff95;
+            margin-bottom: 24px;
 
-            font-family: Lato;
-            font-size: 12px;
+            font-family: "Lato", sans-serif;
+            font-size: 11px;
             font-weight: 300;
             line-height: 1.5;
             letter-spacing: 0.12px;
 
-            margin-bottom: 24px;
+            color: #ffffff95;
         }
     }
 
     &__subscribe-form {
-        display: flex;
         margin-bottom: 24px;
+
+        display: flex;
     }
 
     &__subscribe-form-enter-email {
         width: 183px;
         height: 24px;
+        padding: 0 6px 6px 0;
+
+        overflow: hidden;
+        white-space: nowrap;
+
+        border-bottom: 1px solid #ffffff;
 
         font-family: "Lato", sans-serif;
         font-size: 12px;
@@ -78,40 +85,34 @@
 
         color: #ffffff95;
 
-        padding-bottom: 6px;
-        padding-right: 6px;
-        border-bottom: 1px solid #ffffff;
-
-        overflow: hidden;
-        white-space: nowrap;
-
         span {
             outline: none;
         }
     }
 
     &__subscribe-form-button {
-        font-family: Lato;
-        font-size: 10px;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.1px;
-        transition: 0.3s;
-
-        background-color: #ffffff;
-
         width: 75px;
         height: 24px;
+
+        background-color: #ffffff;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        a {
-            color: #333333;
+        font-family: "Lato", sans-serif;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.1px;
 
+        transition: 0.3s;
+
+        a {
             text-transform: uppercase;
             text-decoration: none;
+
+            color: #333333;
         }
 
         &:hover {
@@ -136,36 +137,122 @@
 }
 
 .copyright {
-    width: 1126px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 300px;
+    display: block;
 
     margin: 0 auto 14px auto;
 
     &__information {
-        width: 585px;
+        width: 300px;
+
         display: flex;
         justify-content: space-between;
 
         p {
             opacity: 0.64;
+
             font-family: "Lato", sans-serif;
-            font-size: 12px;
+            font-size: 8px;
             font-weight: normal;
+
             line-height: 1.25;
             letter-spacing: 0.12px;
             text-align: left;
+
             color: #333333;
         }
     }
 
     &__payment-systems {
         img {
-            margin-right: 10px;
+            height: 14px;
+            width: 14px;
+            margin: 6px 2px 0 0;
 
             &:last-child {
                 margin-right: 0;
+            }
+        }
+    }
+}
+
+@include mobile-large {
+    .footer {
+        &__title {
+            font-size: 12px;
+        }
+
+        &__navigation-columns {
+            width: 390px;
+        }
+
+        &__navigation-column {
+            margin-right: 60px;
+        }
+    }
+
+    .copyright {
+        width: 390px;
+
+        &__information {
+            width: 352px;
+        }
+    }
+}
+@include tablet-small {
+    .footer {
+        &__title {
+            font-size: 11px;
+        }
+
+        &__navigation-columns {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 580px;
+        }
+
+        &__navigation-column {
+            margin: 0;
+
+            li {
+                font-size: 12px;
+            }
+
+            p {
+                width: 180px;
+                font-size: 12px;
+            }
+        }
+
+        &__subscribe-form-enter-email {
+            width: 132px;
+        }
+
+        &__subscribe-form-button {
+            width: 53px;
+            font-size: 8px;
+        }
+    }
+
+    .copyright {
+        width: 580px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__information {
+            width: 400px;
+
+            p {
+                font-size: 10px;
+            }
+        }
+
+        &__payment-systems {
+            img {
+                height: 20px;
+                width: 20px;
+                margin: 0 6px 0 0;
             }
         }
     }
@@ -195,15 +282,30 @@
         &__subscribe-form-enter-email {
             width: 150px;
         }
+
+        &__subscribe-form-button {
+            width: 75px;
+            height: 24px;
+            font-size: 10px;
+        }
     }
 
     .copyright {
         width: 720px;
+
         &__information {
-            width: 390px;
+            width: 500px;
 
             p {
-                font-size: 10px;
+                font-size: 12px;
+            }
+        }
+
+        &__payment-systems {
+            img {
+                height: 24px;
+                width: 24px;
+                margin: 0 8px 0 0;
             }
         }
     }
@@ -242,6 +344,14 @@
 
             p {
                 font-size: 12px;
+            }
+        }
+
+        &__payment-systems {
+            img {
+                height: 32px;
+                width: 32px;
+                margin: 0 10px 0 0;
             }
         }
     }

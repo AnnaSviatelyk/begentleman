@@ -1,20 +1,23 @@
 .button {
-    position: relative;
-    width: 175px;
-    height: 55px;
+    width: 149px;
+    height: 44px;
+
     background-color: #ffffff00;
-    border: solid 1.5px #ffffff;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
+    position: relative;
+    overflow: hidden;
+
+    border: solid 1.5px #ffffff;
+
     font-family: "Lora", serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
-
-    overflow: hidden;
 
     span {
         transition: color 0.3s;
@@ -24,8 +27,10 @@
         content: "";
         width: 240px;
         height: 0;
-        display: block;
         opacity: 0;
+
+        display: block;
+
         position: absolute;
         left: 50%;
         top: 50%;
@@ -49,10 +54,11 @@
 }
 
 .button--black {
+    margin: 65px auto 0 auto;
     background-color: #ffffff00;
+
     border: solid 1.5px #333333;
     color: #333333;
-    margin: 65px auto 0 auto;
 
     &::after {
         background-color: #333333;
@@ -66,37 +72,60 @@
 }
 
 .button-blurred {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 179px auto 0 auto;
-
     width: 161px;
     height: 45px;
+    margin: 142px auto 0 auto;
 
     backdrop-filter: blur(4px);
     background-color: rgba(54, 54, 54, 0.2);
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-family: "Lato", sans-serif;
     text-decoration: none;
     text-transform: uppercase;
-    transition: all 0.1s;
-
     color: #ffffff;
 
+    transition: all 0.1s;
+
     &:hover {
-        transform: scale(1.05);
         background-color: rgba(54, 54, 54, 0.3);
+
+        transform: scale(1.05);
     }
 
     &--blog {
         width: 206px;
         height: 50px;
-        text-align: center;
-        font-size: 14px;
-
         margin: 219px auto 0 auto;
+
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@include tablet-small {
+    .button {
+        width: 175px;
+        height: 55px;
+
+        font-size: 16px;
+    }
+    .button-blurred {
+        width: 300px;
+        height: 77px;
+        margin-top: 225px;
+
+        font-size: 20px;
+
+        &--blog {
+            width: 206px;
+            height: 50px;
+
+            font-size: 16px;
+        }
     }
 }
 
@@ -104,6 +133,7 @@
     .button {
         width: 155px;
         height: 45px;
+
         font-size: 14px;
     }
 
@@ -151,14 +181,15 @@
     .button-blurred {
         width: 200px;
         height: 65px;
+
         font-size: 18px;
 
         &--blog {
             width: 216px;
             height: 60px;
-            font-size: 18px;
-
             margin-top: 272px;
+
+            font-size: 18px;
         }
     }
 }
@@ -167,11 +198,13 @@
     .button {
         width: 186px;
         height: 64px;
+
         font-size: 18px;
     }
     .button-blurred {
         width: 220px;
         height: 75px;
+
         font-size: 18px;
     }
 }

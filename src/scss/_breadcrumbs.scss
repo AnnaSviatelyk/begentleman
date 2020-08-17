@@ -1,7 +1,10 @@
 .breadcrumbs {
+    width: 300px;
+    margin: 0 auto 16px auto;
     display: flex;
 
     &--product-page {
+        display: none;
         margin-bottom: 32px;
     }
 
@@ -10,8 +13,6 @@
     }
 
     &__breadcrumb {
-        margin-bottom: 32px;
-
         font-family: "Lato";
         font-size: 14px;
         font-weight: 300;
@@ -39,10 +40,32 @@
     }
 }
 
+@include mobile-large {
+    .breadcrumbs {
+        width: 390px;
+
+        &--product-page {
+            width: 305px;
+            margin: 0;
+        }
+    }
+}
+
+@include tablet-small {
+    .breadcrumbs {
+        width: 580px;
+        margin: 0 auto 32px auto;
+
+        &--product-page {
+            width: 305px;
+            margin: 0;
+        }
+    }
+}
+
 @include tablet-large {
     .breadcrumbs {
         width: 720px;
-        margin: 0 auto;
 
         &--product-page {
             width: 305px;

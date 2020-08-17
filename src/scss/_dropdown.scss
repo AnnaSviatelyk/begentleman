@@ -76,4 +76,17 @@
       font-weight: normal;
     }
   }
+
+  &--mobile {
+    .selector {
+      &__default-option {
+        width: 252px;
+      }
+
+      &__select-ul {
+        top: 100px;
+        width: 252px;
+      }
+    }
+  }
 }

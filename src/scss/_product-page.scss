@@ -1,8 +1,10 @@
 .product-description {
-  display: flex;
-  margin: 0 auto 120px auto;
+  width: 300px;
+  display: block;
+  margin: 0 auto 80px auto;
 
   &__arrow {
+    margin-bottom: 24px;
     cursor: pointer;
     transition: all 0.3s;
 
@@ -18,17 +20,16 @@
   &__images {
     display: flex;
     flex-direction: column;
-
-    margin-right: 49px;
   }
 
   &__image-main {
-    width: 545px;
-    height: 693px;
-    margin-bottom: 24px;
+    width: 300px;
+    height: 364px;
+    margin-bottom: 12px;
 
     background-size: cover;
-    background-position: top;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__more-images {
@@ -39,8 +40,12 @@
   }
 
   &__more-images-item {
-    width: 169px;
-    height: 183px;
+    width: 95px;
+    height: 110px;
+
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
 
     &--selected {
       display: none;
@@ -245,15 +250,57 @@
 }
 
 .additional-products {
+  width: 300px;
+  margin: 0 auto 80px auto;
   &__products-container {
     display: flex;
   }
 }
 
+@include mobile-large {
+  .product-description {
+    width: 390px;
+
+    &__image-main {
+      width: 390px;
+      height: 400px;
+    }
+
+    &__more-images-item {
+      width: 124px;
+      height: 144px;
+    }
+  }
+
+  .additional-products {
+    width: 390px;
+  }
+}
+
+@include tablet-small {
+  .product-description {
+    width: 580px;
+
+    &__image-main {
+      width: 580px;
+      height: 400px;
+    }
+
+    &__more-images-item {
+      width: 182px;
+      height: 183px;
+    }
+  }
+
+  .additional-products {
+    width: 580px;
+  }
+}
+
 @include tablet-large {
   .product-description {
+    display: flex;
     width: 720px;
-    margin: 0 auto 80px auto;
 
     &__images {
       margin-right: 32px;
@@ -262,7 +309,6 @@
     &__image-main {
       width: 348px;
       height: 440px;
-      margin-bottom: 12px;
     }
 
     &__more-images-item {
@@ -286,6 +332,10 @@
     &__price {
       font-family: "Lato", sans-serif;
       font-size: 32px;
+    }
+
+    &__arrow {
+      margin-bottom: 0;
     }
   }
 

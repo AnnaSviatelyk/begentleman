@@ -1,20 +1,20 @@
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
-@mixin desktop-extra-large {
-    @media (min-width: 1800px) {
+@mixin mobile-large {
+    @media (min-width: 411px) {
         @content;
     }
 }
 
-@mixin desktop-large {
-    @media (min-width: 1600px) {
+@mixin tablet-small {
+    @media (min-width: 600px) {
         @content;
     }
 }
 
-@mixin desktop-medium {
-    @media (min-width: 1280px) {
+@mixin tablet-large {
+    @media (min-width: 750px) {
         @content;
     }
 }
@@ -25,20 +25,20 @@ $desktop-width: 1024px;
     }
 }
 
-@mixin tablet-large {
-    @media (min-width: 800px) {
+@mixin desktop-medium {
+    @media (min-width: 1280px) {
         @content;
     }
 }
 
-@mixin tablet-medium {
-    @media (min-width: 800px) {
+@mixin desktop-large {
+    @media (min-width: 1600px) {
         @content;
     }
 }
 
-@mixin tablet-small {
-    @media (min-width: 600px) {
+@mixin desktop-extra-large {
+    @media (min-width: 1800px) {
         @content;
     }
 }

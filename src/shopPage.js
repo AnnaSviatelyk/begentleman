@@ -94,6 +94,21 @@ if (categoriesSelector) {
     });
 }
 
+//Add and Remove Filter 
+const openMobileFilters = () => {
+    document.querySelector(DOMstrings.filterMobile).style.display = 'block'
+    document.querySelector(DOMstrings.backdrop).style.display = 'block'
+}
+
+const closeMobileFilters = () => {
+    document.querySelector(DOMstrings.filterMobile).style.display = 'none'
+    document.querySelector(DOMstrings.backdrop).style.display = 'none'
+}
+
+document.querySelector(DOMstrings.openFilter).addEventListener('click', openMobileFilters)
+document.querySelector(DOMstrings.closeFilter).addEventListener('click', closeMobileFilters)
+document.querySelector(DOMstrings.applyFilters).addEventListener('click', closeMobileFilters)
+
 //Eventlisteners on Category
 const selectCategoryHandler = (category) => {
     //Add eventlistener to every item in NodeList
@@ -219,6 +234,7 @@ const noProductsFound = (filteredData) => {
 //Clean filters
 document.querySelector(DOMstrings.cleanFilters).addEventListener('click', () => {
     document.querySelector(DOMstrings.selectorOptionText).textContent = 'All products'
+
     filtersContainer = { ...defaultFilters }
     priceRange.noUiSlider.reset()
     removeAllActiveClassesFromFilters()

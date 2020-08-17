@@ -18,7 +18,25 @@ export const createSwiper = (container) => {
             console.log(init)
             swiper = new Swiper(container, {
                 slidesPerView: 3,
-                spaceBetween: 16,
+                spaceBetween: 30,
+
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+
+                    600: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+
+                    750: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                },
+
                 pagination: {
                     el: isShownPagination ? '.swiper-pagination' : null,
                     clickable: true,

@@ -11,8 +11,7 @@
 </head>
 
 <body>
-    <section class="navigation--black">
-        <img src="images/logo-black.svg" class="navigation__logo" alt="logo">
+    <section class="navigation navigation--black">
         <div class="navigation__nav-container">
             <svg class="navigation__burger-menu" xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 32 32">
                 <g id="Group_15" data-name="Group 15" transform="translate(-532 -1100)">
@@ -23,6 +22,7 @@
                     <rect width="32" height="32" transform="translate(532 1100)" fill="none" />
                 </g>
             </svg>
+            <img src="images/logo-black.svg" class="navigation__logo" alt="logo">
             <div class="navigation__icons">
                 <a href="#" class="navigation__icon"><img src="images/search-black.svg" class="navigation__icon--img"
                         alt="search icon"></a>
@@ -42,7 +42,117 @@
         <a href="shop-page.html" class="breadcrumbs__breadcrumb  breadcrumbs__breadcrumb--shop-page">All products</a>
     </div>
 
+    <div class='open-filter'>
+        <div class="open-filter__icon"></div>
+        <div class="open-filter__text">Filter By</div>
+    </div>
+    </div>
+
+    <div class="backdrop"></div>
     <div class="all-content">
+        <section class="filter-mobile">
+            <div class="filter filter--mobile">
+                <div class="filter__close-filters"></div>
+                <h3 class="filter__heading">Filter by </h3>
+                <div class="filter__all-categories">
+
+                    <div class=" selector selector--mobile">
+                        <div class="selector__select-wrap">
+                            <ul class="selector__default-option">
+                                <li>
+                                    <div class="selector__option--all">
+                                        <p>All products</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <ul class="selector__select-ul">
+                                <li class="selector__option selector__option--active">
+                                    <p>All products</p>
+                                </li>
+
+                                <li class="selector__option">
+                                    <p>Coats and Jackets</p>
+                                </li>
+
+                                <li class="selector__option">
+                                    <p>Shirts</p>
+                                </li>
+
+                                <li class="selector__option">
+                                    <p>Trousers</p>
+                                </li>
+
+                                <li class="selector__option">
+                                    <p>Shoes</p>
+                                </li>
+
+                                <li class="selector__option">
+                                    <p>Underwear</p>
+                                </li>
+
+                                <li class="selector__option">
+                                    <p>Accessories</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="filter__fit">
+                    <h3 class="filter__category-heading">Fit:</h3>
+                    <div class="filter__fits">
+                        <div class="filter__fit-option">Slim</div>
+                        <div class="filter__fit-option">Classic</div>
+                        <div class="filter__fit-option">Regular</div>
+                        <div class="filter__fit-option">Tailored</div>
+                    </div>
+                </div>
+
+                <div class="filter__all-sizes">
+                    <h3 class="filter__category-heading">Size:</h3>
+                    <div class="filter__sizes">
+                        <div class="filter__size">36</div>
+                        <div class="filter__size ">38</div>
+                        <div class="filter__size">40</div>
+                        <div class="filter__size">42</div>
+                        <div class="filter__size">44</div>
+                        <div class="filter__size">46</div>
+                    </div>
+                </div>
+
+                <div class="filter__price">
+                    <h3 class="filter__category-heading">Price:</h3>
+                    <div id="slider"></div>
+                    <div">
+
+                        <div class="filter__price-number">
+                            <span class="filter__price-number filter__price-number--lower">$99</span>
+                            <span class="filter__price-number filter__price-number--higher">$300</span>
+                        </div>
+                </div>
+
+                <div class="filter__color">
+                    <h3 class="filter__category-heading">Color:</h3>
+                    <div class="filter__colors">
+                        <div class="filter__color-option" id="white"></div>
+                        <div class="filter__color-option" id='lightBlue'></div>
+                        <div class="filter__color-option" id="lightGrey"></div>
+                        <div class="filter__color-option" id="green"></div>
+                        <div class="filter__color-option" id='red'></div>
+                        <div class="filter__color-option" id='blue'></div>
+                        <div class="filter__color-option" id='grey'></div>
+                        <div class="filter__color-option" id='black'></div>
+                    </div>
+                </div>
+                <button class="filter__button filter__button--apply">Apply</button>
+                <button class="filter__button filter__button--clean">Clean filters</button>
+            </div>
+        </section>
+
+
         <section class="filter">
             <h3 class="filter__heading">Filter by </h3>
             <div class="filter__all-categories">
@@ -138,8 +248,7 @@
                     <div class="filter__color-option" id='black'></div>
                 </div>
             </div>
-
-            <button class="filter__clean-filters">Clean filters</button>
+            <button class="filter__button filter__button--clean">Clean filters</button>
         </section>
 
         <section class="all-products">

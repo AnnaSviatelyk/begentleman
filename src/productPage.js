@@ -42,10 +42,12 @@ registerActiveClass(DOMstrings.productSize, DOMstrings.productSizeSelected)
 const getProductImagesHtml = (images, selectedImageIndex = 0) => {
     let test = ''
     images.forEach((image, index) => {
-        if (index !== selectedImageIndex)
-            test += `<img class="product-description__more-images-item" src="images/${images[index]}"></img>`
+        if (index !== selectedImageIndex) {
+            test += `<div class="product-description__more-images-item"  style="background-image: url(images/${images[index]})"></div>`
+        }
+        console.log(test)
     })
-    return (`<img src='images/${images[selectedImageIndex]}' class="product-description__image-main">
+    return (`<div style="background-image: url(images/${images[selectedImageIndex]})" class="product-description__image-main"></div>
         <div class="product-description__more-images">
                 ${test}
                 </div>`)

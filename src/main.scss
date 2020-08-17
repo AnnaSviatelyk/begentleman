@@ -3,6 +3,7 @@
 @import "./scss/home";
 @import "./scss/button";
 @import "./scss/footer";
+@import "./scss/filter";
 @import "./scss/product-page";
 @import "./scss/shop-page";
 @import "./scss/dropdown";
@@ -22,12 +23,13 @@
 
 body {
   background-color: $brand-color;
+  overflow-x: hidden;
 }
 
 .section-title {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-family: "Lora", sans-serif;
-  font-size: 32px;
+  font-size: 20px;
   color: #333333;
   text-transform: uppercase;
   font-weight: normal;
@@ -64,9 +66,15 @@ body {
   background: #333333;
 }
 
+@include tablet-small {
+  .section-title {
+    font-size: 23px;
+    margin-bottom: 24px;
+  }
+}
+
 @include tablet-large {
   .section-title {
-    margin-bottom: 24px;
     font-size: 24px;
   }
 }
