@@ -87,11 +87,13 @@ const filterData = () => {
     noProductsFound(filteredData)
 }
 
-const categoriesSelector = document.querySelector(DOMstrings.selector)
+const categoriesSelector = document.querySelectorAll(DOMstrings.selector)
 if (categoriesSelector) {
-    categoriesSelector.addEventListener('click', function () {
-        this.classList.toggle(DOMstrings.selectorActive);
-    });
+    categoriesSelector.forEach(selector => {
+        selector.addEventListener('click', function () {
+            this.classList.toggle(DOMstrings.selectorActive);
+        });
+    })
 }
 
 //Add and Remove Filter 
@@ -115,10 +117,14 @@ const selectCategoryHandler = (category) => {
     category.addEventListener('click', function () {
         //Replace text in default category to selected one 
         const categoryName = this.querySelector('p').textContent
-        document.querySelector(DOMstrings.selectorOptionText).textContent = categoryName;
+        document.querySelectorAll(DOMstrings.selectorOptionText).forEach(selector => {
+            selector.textContent = categoryName;
+        })
 
         //Remove active class from others 
-        document.querySelector(DOMstrings.selectorOptionActive).classList.remove(DOMstrings.selectorOptionActiveClass);
+        document.querySelectorAll(DOMstrings.selectorOptionActive).forEach(selector => {
+            selector.classList.remove(DOMstrings.selectorOptionActiveClass);
+        })
 
         //Add active class to selected category in list 
         this.classList.add(DOMstrings.selectorOptionActiveClass);
@@ -138,6 +144,7 @@ const filterProductsByCategory = (category) => {
 }
 
 const selectorOptions = document.querySelectorAll(DOMstrings.selectorOption);
+
 selectorOptions.forEach(cur => {
     selectCategoryHandler(cur)
 })
@@ -191,31 +198,46 @@ const updateFiltersCotainerWithActiveFilters = (parameterName, parameterID, filt
 }
 
 //Price range filter
-const priceRange = document.getElementById('slider');
-noUiSlider.create(priceRange, {
-    start: [99, 300],
-    connect: true,
-    range: {
-        'min': 0,
-        'max': 1000
-    }
-});
+const priceRange = document.querySelectorAll('.slider')
+
+priceRange.forEach(slider => {
+    noUiSlider.create(slider, {
+        start: [99, 300],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 1000
+        }
+    });
+})
+
 
 //Update prices in UI
-priceRange.noUiSlider.on('update', (values) => {
-    document.querySelector(DOMstrings.lowerPriceInRange).textContent = `$${parseInt(values[0])}`
-    document.querySelector(DOMstrings.higherPriceInRange).textContent = `$${parseInt(values[1])}`
-});
+priceRange.forEach(slider => {
+    slider.noUiSlider.on('update', (values) => {
+        document.querySelectorAll(DOMstrings.lowerPriceInRange).forEach(price => {
+            price.textContent = `$${parseInt(values[0])}`
+        })
+
+        document.querySelectorAll(DOMstrings.higherPriceInRange).forEach(price => {
+            price.textContent = `$${parseInt(values[1])}`
+        })
+    });
+})
 
 //Update filtersContainer with current price range 
-priceRange.noUiSlider.on('change', (values) => {
-    filtersContainer.price = values
-    filterData()
+priceRange.forEach(slider => {
+    slider.noUiSlider.on('change', (values) => {
+        filtersContainer.price = values
+        filterData()
+    })
+
+    slider.noUiSlider.on('end', (values) => {
+        filtersContainer.price = values
+        filterData()
+    })
 })
-priceRange.noUiSlider.on('end', (values) => {
-    filtersContainer.price = values
-    filterData()
-})
+
 
 //Function for pagination and noproducts found toggle
 const noProductsFound = (filteredData) => {
@@ -232,13 +254,21 @@ const noProductsFound = (filteredData) => {
 }
 
 //Clean filters
-document.querySelector(DOMstrings.cleanFilters).addEventListener('click', () => {
-    document.querySelector(DOMstrings.selectorOptionText).textContent = 'All products'
+document.querySelectorAll(DOMstrings.cleanFilters).forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll(DOMstrings.selectorOptionText).forEach(selector => {
+            selector.textContent = 'All products'
+        })
 
-    filtersContainer = { ...defaultFilters }
-    priceRange.noUiSlider.reset()
-    removeAllActiveClassesFromFilters()
-    filterData()
+        filtersContainer = { ...defaultFilters }
+        priceRange.forEach(slider => {
+            slider.noUiSlider.reset()
+        })
+
+        removeAllActiveClassesFromFilters()
+        filterData()
+    })
+
 })
 
 const removeAllActiveClassesFromFilters = () => {

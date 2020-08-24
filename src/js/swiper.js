@@ -2,9 +2,6 @@ import Swiper, { Pagination } from "swiper";
 Swiper.use([Pagination]);
 
 
-
-
-
 export const createSwiper = (container) => {
     let init = false
     let swiper = Swiper
@@ -15,7 +12,7 @@ export const createSwiper = (container) => {
         if (!init) {
             init = true
             isShownPagination = true
-            console.log(init)
+
             swiper = new Swiper(container, {
                 slidesPerView: 3,
                 spaceBetween: 30,

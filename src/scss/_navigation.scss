@@ -1,49 +1,21 @@
 .navigation {
-    &--black {
-        height: 69px;
-        margin-bottom: 16px;
-
-        background-color: #ffffff;
-
-        display: flex;
-
-        .navigation {
-            &__logo {
-                margin-top: -7px;
-            }
-
-            &__nav-container {
-                margin: 16px auto 0 auto;
-            }
-        }
-    }
-
     &__nav-container {
         width: 300px;
-        margin: 32px auto 0 auto;
+        margin: 16px auto;
 
-        position: relative;
-        align-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__logo {
-        height: 44px;
+        height: 40px;
         width: auto;
-        margin-top: -10px;
-
-        position: absolute;
-        right: 0;
-
         user-select: none;
     }
 
     &__icons {
         display: none;
-        align-items: center;
-
-        position: absolute;
-        top: 5px;
-        right: 0;
     }
 
     &__cart-amount {
@@ -71,11 +43,6 @@
 
     &__burger-menu {
         height: 28px;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-
         cursor: pointer;
 
         //Hover animation
@@ -100,18 +67,19 @@
             }
         }
     }
+
+    &--black {
+        height: auto;
+        margin-bottom: 16px;
+
+        background-color: #ffffff;
+
+        display: flex;
+    }
 }
 
 @include mobile-large {
     .navigation {
-        &--black {
-            .navigation {
-                &__nav-container {
-                    width: 390px;
-                }
-            }
-        }
-
         &__nav-container {
             width: 390px;
         }
@@ -120,6 +88,40 @@
 
 @include tablet-small {
     .navigation {
+        &__nav-container {
+            width: 580px;
+            height: 56px;
+            justify-content: unset;
+
+            position: relative;
+        }
+
+        &__logo {
+            height: 56px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__icons {
+            display: flex;
+            align-items: center;
+
+            position: absolute;
+            right: 0;
+        }
+
+        &__icon {
+            &--img {
+                margin-right: 12px;
+                height: 18px;
+            }
+        }
+
+        &__burger-menu {
+            height: 24px;
+        }
+
         &--black {
             height: 80px;
             margin-bottom: 24px;
@@ -132,49 +134,14 @@
                 }
             }
         }
-
-        &__nav-container {
-            width: 580px;
-        }
-
-        &__logo {
-            height: 56px;
-
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        &__icons {
-            display: flex;
-        }
-
-        &__icon {
-            &--img {
-                margin-right: 12px;
-                height: 18px;
-            }
-        }
-
-        &__burger-menu {
-            height: 24px;
-            top: 0;
-            left: 0;
-        }
     }
 }
 
 @include tablet-large {
     .navigation {
-        &--black {
-            .navigation {
-                &__nav-container {
-                    width: 720px;
-                }
-            }
-        }
-
         &__nav-container {
             width: 720px;
+            margin: 24px auto;
         }
 
         &__icon {
@@ -187,11 +154,35 @@
         &__burger-menu {
             height: 28px;
         }
+
+        &--black {
+            height: 94px;
+
+            .navigation {
+                &__nav-container {
+                    width: 720px;
+                }
+            }
+        }
     }
 }
 
 @include desktop-small {
     .navigation {
+        &__nav-container {
+            width: 900px;
+            height: 71px;
+            margin-top: 16px;
+        }
+
+        &__cart-amount {
+            font-size: 16px;
+        }
+
+        &__logo {
+            height: 56px;
+        }
+
         &--black {
             .navigation {
                 &__nav-container {
@@ -199,31 +190,17 @@
                 }
             }
         }
-
-        &__nav-container {
-            width: 900px;
-        }
-
-        &__cart-amount {
-            font-size: 16px;
-        }
     }
 }
 
 @include desktop-medium {
     .navigation {
-        &--black {
-            margin-bottom: 40px;
-
-            .navigation {
-                &__nav-container {
-                    width: 1126px;
-                }
-            }
-        }
-
         &__nav-container {
             width: 1126px;
+        }
+
+        &__logo {
+            height: 71px;
         }
 
         &__cart-amount {
@@ -239,27 +216,29 @@
         &__burger-menu {
             height: 32px;
         }
+
+        &--black {
+            height: 104px;
+            margin-bottom: 40px;
+
+            .navigation {
+                &__nav-container {
+                    width: 1126px;
+                }
+            }
+        }
     }
 }
 
 @include desktop-large {
     .navigation {
-        &--black {
-            .navigation {
-                &__nav-container {
-                    width: 1300px;
-                }
-            }
-        }
-
         &__nav-container {
             width: 1300px;
-            margin-top: 40px;
+            margin: 24px auto;
         }
 
         &__logo {
-            height: 68px;
-            margin-top: 18px;
+            height: 74px;
         }
 
         &__burger-menu {
@@ -271,6 +250,18 @@
                 height: 29px;
             }
         }
+
+        &--black {
+            height: 110px;
+
+            .navigation {
+                &__nav-container {
+                    width: 1300px;
+                    height: 74px;
+                    margin: 16px auto;
+                }
+            }
+        }
     }
 }
 
@@ -278,11 +269,15 @@
     .navigation {
         &__nav-container {
             width: 1500px;
+            margin: 26px auto;
         }
 
-        &__logo {
-            height: 72px;
-            margin-top: 15px;
+        &--black {
+            .navigation {
+                &__nav-container {
+                    width: 1500px;
+                }
+            }
         }
     }
 }
