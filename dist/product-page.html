@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link href="main.css" rel='stylesheet'>
+    <title>Be Gentleman</title>
+</head>
+
+<body>
+    <section class="navigation navigation--black">
+        <div class="navigation__nav-container">
+            <svg class="navigation__burger-menu" xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 32 32">
+                <g id="Group_15" data-name="Group 15" transform="translate(-532 -1100)">
+                    <path d="M28,10H4A1,1,0,0,1,4,8H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#333" />
+                    <path class="hero-area__burger-menu-middle-line" d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"
+                        transform="translate(532 1100)" fill="#333" />
+                    <path d="M28,24H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" transform="translate(532 1100)" fill="#33" />
+                    <rect width="32" height="32" transform="translate(532 1100)" fill="none" />
+                </g>
+            </svg>
+            <img src="images/logo-black.svg" class="navigation__logo" alt="logo">
+            <div class="navigation__icons">
+                <a href="#" class="navigation__icon"><img src="images/search-black.svg" class="navigation__icon--img"
+                        alt="search icon"></a>
+                <a href="#" class="navigation__icon"><img src="images/location-black.svg" class="navigation__icon--img"
+                        alt="pin icon"></a>
+                <a href="#" class="navigation__icon"><img src="images/user-black.svg" class="navigation__icon--img"
+                        alt="user icon"></a>
+                <a href="#" class="navigation__icon"><img src="images/bag-black.svg" class="navigation__icon--img"
+                        alt="bag icon"></a>
+                <span class="navigation__cart-amount--black">(0)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-description">
+        <div style="display: flex; flex-direction: column">
+            <div class="product-description__images" id="slider"></div>
+            <div class="product-description__arrows">
+                <img class="product-description__arrow product-description__arrow--left"
+                    src="images/flip-image-arrow-left.svg">
+                <img class="product-description__arrow product-description__arrow--right"
+                    src="images/flip-image-arrow-right.svg">
+            </div>
+        </div>
+        <div class="product-description__product-info">
+            <div class="breadcrumbs breadcrumbs--product-page">
+                <a href="index.html" class="breadcrumbs__breadcrumb">Home</a>
+                <span class="breadcrumbs__divider">/</span>
+                <a href="shop-page.html" class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">All
+                    products</a>
+                <span class="breadcrumbs__divider">/</span>
+                <a href="shop-page.html"
+                    class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Shirts</a>
+                <span class="breadcrumbs__divider">/</span>
+                <a href="product-page.html" class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb--product-page">Cotton
+                    melange shirt</a>
+            </div>
+
+            <h2 class="section-title">Cotton melange shirt</h2>
+            <div class="product-description__element">
+                <span class="product-description__category">Product code: </span>
+                <span class="product-description__meaning product-description__meaning--code">SB13247</span>
+            </div>
+            <div class="product-description__element product-description__element--column">
+                <span class="product-description__category">Fabric:</span>
+                <span class="product-description__meaning">Cotton</span>
+            </div>
+            <div class="product-description__element product-description__element--column">
+                <span class="product-description__category">Color:</span>
+                <div class="product-description__colors">
+                    <div class="product-description__color"></div>
+                    <div class="product-description__color"></div>
+                    <div class="product-description__color"></div>
+                </div>
+            </div>
+
+            <div class="product-description__element product-description__element--column ">
+                <span class="product-description__category">Size:</span>
+                <div class="product-description__sizes">
+                    <div class="product-description__size">36</div>
+                    <div class="product-description__size">38</div>
+                    <div class="product-description__size">40</div>
+                    <div class="product-description__size">42</div>
+                    <div class="product-description__size">44</div>
+                    <div class="product-description__size">48</div>
+                </div>
+            </div>
+
+            <div class="product-description__view-sizeguide">
+                <img src="images/measuring.svg">
+                <a href="#">View size guide</a>
+            </div>
+
+            <div class="product-description__divider"> </div>
+
+            <div class="product-description__text-description">
+                <p class="product-description__text-description">“Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum
+                    dolore eu fugiat nulla pariatur.</p>
+                <p class="product-description__text-description">Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.”</p>
+            </div>
+            <div class="product-description__buy">
+                <span class="product-description__price">$243</span>
+                <a href="#" class="button button--black product-description__button"><span>Add to cart</span></a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="additional-products swiper-container swiper-add-products">
+        <h2 class="section-title">This will look great with:</h2>
+        <div class="additional-products__products-container swiper-wrapper">
+            <a class="card card--additional-product swiper-slide" href="#">
+                <div class="card__image-container">
+                    <div class="card__image card__image--add-product"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Trousers</span>
+                    <h4 class="card__heading">Stretch Wool Chino Trousers</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class='card__price'>$199</span>
+                </div>
+            </a>
+
+            <a class="card card--additional-product swiper-slide" href="#">
+                <div class="card__image-container">
+                    <div class="card__image card__image--add-product"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Bags</span>
+                    <h4 class="card__heading">Black Leather Travel Bag</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor
+                        nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class="card__price">$121</span>
+                </div>
+            </a>
+
+
+            <a class="card card--additional-product swiper-slide" href="#">
+                <div class="card__image-container">
+                    <div class="card__image card__image--add-product"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Coats and Jackets</span>
+                    <h4 class="card__heading">Zipped Water-Repellent Coat</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor
+                        nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class="card__price">$424</span>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <section class="top-picks swiper-container swiper-top-picks-product-page">
+        <h2 class="section-title top-picks__section-title">Top picks</h2>
+        <div class=" top-picks__products-container swiper-wrapper">
+            <a class="card swiper-slide" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Flat Cotton Melange Shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class="card__price">$243</span>
+                </div>
+            </a>
+
+            <a class="card swiper-slide" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Coats</span>
+                    <h4 class="card__heading">Faux-Suede Bomber Jacket</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class='card__price'>$423</span>
+                </div>
+            </a>
+
+
+            <a class="card swiper-slide" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Check cotton poplin shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class="card__price">$182</span>
+                </div>
+            </a>
+
+
+            <a class="card swiper-slide" href="product-page.html">
+                <div class="card__image-container">
+                    <div class="card__image"></div>
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Shirts</span>
+                    <h4 class="card__heading">Stripe detail cotton shirt</h4>
+                    <p class='card__description'>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Donec
+                        auctor nunc nibh, in posuere arcu
+                        malesuada.</p>
+                    <span class="card__price">$99</span>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__navigation-columns">
+            <div class="footer__navigation-column">
+                <h5 class="footer__title">Clothes</h5>
+                <ul>
+                    <li>Blazers</li>
+                    <li>Suits</li>
+                    <li>Knitwear</li>
+                    <li>Shirts</li>
+                    <li>Shorts and Swimwear</li>
+                    <li>Trousers and Jeans</li>
+                    <li>Coats and Jackets</li>
+                    <li>T-Shirts and Sweatshirts</li>
+                </ul>
+            </div>
+
+            <div class="footer__navigation-column">
+                <h5 class="footer__title">Shoes</h5>
+                <ul>
+                    <li>Boots</li>
+                    <li>Formal shoes</li>
+                    <li>Trainers</li>
+                    <li>Shoe care</li>
+                </ul>
+            </div>
+
+            <div class="footer__navigation-column">
+                <h5 class="footer__title">Accessories</h5>
+                <ul>
+                    <li>Sunglasses</li>
+                    <li>Ties</li>
+                    <li>Umbrellas</li>
+                    <li>Wallets</li>
+                    <li>Bags and Luggage</li>
+                    <li>Belts and Braces</li>
+                    <li>Scarves, Hats and Gloves</li>
+                    <li>Socks and Underwear</li>
+                </ul>
+            </div>
+
+            <div class="footer__navigation-column">
+                <h5 class="footer__title">Shopping and service</h5>
+                <ul>
+                    <li>Delivery</li>
+                    <li>My Account</li>
+                    <li>Size guide</li>
+                    <li>Terms of purchase</li>
+                    <li>Returns</li>
+                    <li>Contact</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+
+            <div class="footer__navigation-column">
+                <h5 class="footer__title">Subscribe to our newsletter</h5>
+                <p>Please, enter your email address, so we could send you informations about the best deals and new
+                    arrivals.</p>
+                <div class="footer__subscribe-form">
+                    <div class="footer__subscribe-form-enter-email">
+                        <span contenteditable="true">Your email</span>
+                    </div>
+                    <div class="footer__subscribe-form-button">
+                        <a href="#">Subscribe</a>
+                    </div>
+                </div>
+
+                <div class="footer__social-links">
+                    <h5 class="footer__title">Follow us</h5>
+                    <div class="footer__social-icons">
+                        <img src="images/facebook.svg">
+                        <img src="images/instagram.svg">
+                        <img src="images/twitter.svg">
+                        <img src="images/youtube.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section class="copyright">
+        <div class="copyright__information">
+            <p>Copyright (c) 2020 Anna Sviatelyk All rights reserved</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+        </div>
+        <div class="copyright__payment-systems">
+            <img src="images/american-express.svg">
+            <img src="images/mastercard.svg">
+            <img src="images/paypal.svg">
+            <img src="images/visa (2).svg">
+        </div>
+    </section>
+    <div class="vertical-menu">
+
+        <ul>
+            <li class="vertical-menu__navigation"><a href="index.html" class="vertical-menu__navigation-link">Main</a>
+            </li>
+            <li class="vertical-menu__navigation-link"><a href="shop-page.html"
+                    class="vertical-menu__navigation-link">All
+                    products</a> </li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Coats and
+                Jackets</li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Shirts</li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Trousers</li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Shoes</li>
+            <li class="vertical-menu__navigation-link vertical-menu__navigation-link--lower-level">Underwear </li>
+            <li><a href="#" class="vertical-menu__navigation-link">Store locator</a></li>
+            <li><a href="#" class="vertical-menu__navigation-link">My account</a></li>
+            <li><a href="#" class="vertical-menu__navigation-link">Contact us</a></li>
+        </ul>
+        <div class="vertical-menu__close-menu-icon-container">
+            <div class="vertical-menu__close-menu-icon"></div>
+        </div>
+    </div>
+    <script src="productPage.js"></script>
+
+
+</body>
+
+</html>
