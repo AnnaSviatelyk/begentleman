@@ -27,6 +27,7 @@
     &__close-menu-icon {
         width: 21px;
         height: 21px;
+
         background-image: url(images/close-menu.svg);
         background-repeat: no-repeat;
         background-size: contain;
@@ -47,8 +48,8 @@
         transition: all 0.3s;
 
         &--lower-level {
-            //margin-bottom: 10px;
             margin-left: 10px;
+
             font-size: 12px;
 
             cursor: pointer;
@@ -82,8 +83,9 @@
         padding: 230px 64px;
 
         &__navigation-link {
-            font-size: 17px;
             margin-bottom: 27px;
+
+            font-size: 17px;
 
             &--lower-level {
                 margin-left: 16px;

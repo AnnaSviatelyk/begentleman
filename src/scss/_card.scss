@@ -68,7 +68,7 @@
     &__price {
         width: 71px;
         height: 32px;
-        margin-left: 190px;
+        margin-left: 220px;
 
         background-color: #333333;
 
@@ -114,6 +114,10 @@
                 background-image: url(images/add-product-3.svg);
             }
         }
+    }
+
+    &--shop-page {
+        margin-bottom: 24px;
     }
 }
 

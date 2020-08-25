@@ -1,11 +1,13 @@
 .breadcrumbs {
     width: 300px;
     margin: 0 auto 16px auto;
+
     display: flex;
 
     &--product-page {
-        display: none;
         margin-bottom: 32px;
+
+        display: none;
     }
 
     &__divider {
@@ -23,6 +25,7 @@
         text-decoration: none;
 
         color: #33333365;
+
         transition: all 0.3s;
 
         &:last-child {
@@ -34,8 +37,7 @@
         }
 
         &--product-page {
-            margin-left: 0;
-            margin-bottom: 0;
+            margin: 0;
         }
     }
 }
@@ -58,6 +60,7 @@
 
         &--product-page {
             width: 305px;
+            margin: 0;
         }
     }
 }
@@ -69,6 +72,7 @@
         &--product-page {
             width: 330px;
             margin: 0 0 24px 0;
+
             display: block;
         }
     }

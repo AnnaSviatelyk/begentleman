@@ -5,13 +5,15 @@
     }
 
     .selector__default-option:before {
-      transform: rotate(-225deg);
       top: 15px;
+      transform: rotate(-225deg);
     }
   }
+
   &__select-wrap {
     width: 163px;
     margin: 0 0 32px 0;
+
     user-select: none;
   }
 
@@ -36,24 +38,28 @@
     }
 
     &:before {
-      content: "";
-      position: absolute;
-      top: 10px;
-      right: 18px;
       width: 7px;
       height: 7px;
       border: 1px solid;
       border-color: transparent transparent #333333 #333333;
+
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 18px;
+
       transform: rotate(-45deg);
     }
   }
 
   &__select-ul {
+    width: 100%;
+    background-color: #ffffff;
+
+    display: none;
+
     position: absolute;
     top: 80px;
-    width: 100%;
-    background: #ffffff;
-    display: none;
   }
 
   &__select-ul li:hover {
@@ -84,8 +90,9 @@
       }
 
       &__select-ul {
-        top: 100px;
         width: 252px;
+
+        top: 100px;
       }
     }
   }
