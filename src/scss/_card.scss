@@ -204,7 +204,7 @@
         }
 
         &__heading {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         &__info {
@@ -507,7 +507,12 @@
 
 @include desktop-extra-large {
     .card {
+        width: 357px;
         margin-right: 24px;
+
+        &__image-container {
+            width: 357px;
+        }
 
         &__image {
             width: 357px;
@@ -530,14 +535,20 @@
         &__price {
             width: 77px;
             height: 36px;
-            margin-left: 269px;
+            margin-left: 271px;
 
             font-size: 18px;
         }
 
         &--shop-page {
             margin-right: 20px;
+            width: 296px;
+
             .card {
+                &__image-container {
+                    width: 296px;
+                }
+
                 &__image {
                     width: 296px;
                     height: 276px;

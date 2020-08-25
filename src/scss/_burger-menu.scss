@@ -1,13 +1,36 @@
 .vertical-menu {
+    width: 290px;
+    height: 100vh;
+    padding: 230px 48px;
+    background-color: #00000099;
+
     display: none;
     position: fixed;
-    padding: 230px 48px;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 100vh;
-    background-color: #00000099;
+
     backdrop-filter: blur(12px);
+
+    &__close-menu-icon-container {
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 36px;
+        right: 30px;
+    }
+
+    &__close-menu-icon {
+        width: 21px;
+        height: 21px;
+        background-image: url(images/close-menu.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
     li {
         margin-bottom: 16px;
@@ -33,6 +56,54 @@
 
         &:hover {
             opacity: 80%;
+        }
+    }
+}
+
+@include tablet-small {
+    .vertical-menu {
+        width: 300px;
+        padding: 230px 48px;
+    }
+}
+
+@include desktop-small {
+    .vertical-menu {
+        &__close-menu-icon {
+            width: 21px;
+            height: 21px;
+        }
+    }
+}
+
+@include desktop-medium {
+    .vertical-menu {
+        width: 350px;
+        padding: 230px 64px;
+
+        &__navigation-link {
+            font-size: 17px;
+            margin-bottom: 27px;
+
+            &--lower-level {
+                margin-left: 16px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@include desktop-large {
+    .vertical-menu {
+        width: 400px;
+        padding: 230px 64px;
+
+        &__navigation-link {
+            font-size: 18px;
+
+            &--lower-level {
+                font-size: 16px;
+            }
         }
     }
 }

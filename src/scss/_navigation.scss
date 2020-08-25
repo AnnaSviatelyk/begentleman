@@ -183,7 +183,15 @@
             height: 56px;
         }
 
+        &__icon {
+            &--img {
+                height: 20px;
+                margin-right: 16px;
+            }
+        }
+
         &--black {
+            height: 104px;
             .navigation {
                 &__nav-container {
                     width: 900px;
@@ -199,17 +207,17 @@
             width: 1126px;
         }
 
-        &__logo {
-            height: 71px;
-        }
-
         &__cart-amount {
             font-size: 16px;
         }
 
+        &__logo {
+            height: 56px;
+        }
         &__icon {
             &--img {
-                height: 24px;
+                height: 22px;
+                margin-right: 16px;
             }
         }
 
