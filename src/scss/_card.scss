@@ -68,7 +68,7 @@
     &__price {
         width: 71px;
         height: 32px;
-        margin-left: 220px;
+        margin-left: 213px;
 
         background-color: #333333;
 
@@ -118,6 +118,16 @@
 
     &--shop-page {
         margin-bottom: 24px;
+
+        .card {
+            &__description {
+                font-family: "Lato", sans-serif;
+                font-weight: 300;
+                line-height: 1.19;
+                letter-spacing: 0.16px;
+                color: #33333390;
+            }
+        }
     }
 }
 
@@ -137,7 +147,7 @@
         }
 
         &__price {
-            margin-left: 309px;
+            margin-left: 303px;
         }
 
         &--shop-page {
@@ -166,7 +176,7 @@
         }
 
         &__price {
-            margin-left: 194px;
+            margin-left: 188px;
         }
 
         &--shop-page {
@@ -191,7 +201,7 @@
                 }
 
                 &__price {
-                    margin-left: 280px;
+                    margin-left: 274px;
                 }
             }
         }
@@ -226,7 +236,7 @@
         &__price {
             width: 64px;
             height: 32px;
-            margin-left: 159px;
+            margin-left: 153px;
 
             font-size: 14px;
         }
@@ -252,7 +262,7 @@
                 }
 
                 &__price {
-                    margin-left: 185px;
+                    margin-left: 180px;
                 }
             }
 
@@ -302,7 +312,7 @@
         }
 
         &__price {
-            margin-left: 144px;
+            margin-left: 138px;
         }
 
         &--shop-page {
@@ -331,7 +341,7 @@
                 }
 
                 &__price {
-                    margin-left: 266px;
+                    margin-left: 260px;
                 }
             }
         }
@@ -367,7 +377,7 @@
         &__price {
             width: 72px;
             height: 32px;
-            margin-left: 192px;
+            margin-left: 182px;
         }
 
         &--shop-page {
@@ -388,7 +398,7 @@
                 }
 
                 &__price {
-                    margin-left: 193px;
+                    margin-left: 186px;
                 }
             }
 
@@ -459,7 +469,7 @@
         }
 
         &__price {
-            margin-left: 225px;
+            margin-left: 219px;
         }
 
         &--shop-page {
@@ -479,7 +489,7 @@
                 }
 
                 &__price {
-                    margin-left: 165px;
+                    margin-left: 159px;
                 }
             }
 
@@ -539,7 +549,7 @@
         &__price {
             width: 77px;
             height: 36px;
-            margin-left: 271px;
+            margin-left: 265px;
 
             font-size: 18px;
         }
@@ -571,7 +581,7 @@
                 }
 
                 &__price {
-                    margin-left: 210px;
+                    margin-left: 204px;
                 }
             }
 
