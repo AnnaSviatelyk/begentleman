@@ -7,7 +7,7 @@ window.addEventListener('load', () => createSwiper('.swiper-add-products'))
 window.addEventListener('resize', () => createSwiper('.swiper-add-products'))
 
 window.addEventListener('load', () => createSwiper('.swiper-top-picks-product-page'))
-window.addEventListener('resize', () => createSwiper('.sswiper-top-picks-product-page'))
+window.addEventListener('resize', () => createSwiper('.swiper-top-picks-product-page'))
 
 //Toggle burger menu
 initBurgerMenuClickListener(DOMstrings.burgerMenuIcon, DOMstrings.burgerMenuContainer)

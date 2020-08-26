@@ -8,6 +8,10 @@
         justify-content: space-between;
     }
 
+    &__logo-link {
+        height: 40px;
+    }
+
     &__logo {
         height: 40px;
         width: auto;
@@ -96,6 +100,10 @@
             position: relative;
         }
 
+        &__logo-link {
+            height: 56px;
+        }
+
         &__logo {
             height: 56px;
             position: absolute;
@@ -179,6 +187,10 @@
             font-size: 16px;
         }
 
+        &__logo-link {
+            height: 56px;
+        }
+
         &__logo {
             height: 56px;
         }
@@ -211,9 +223,6 @@
             font-size: 16px;
         }
 
-        &__logo {
-            height: 56px;
-        }
         &__icon {
             &--img {
                 height: 22px;
@@ -243,6 +252,10 @@
         &__nav-container {
             width: 1300px;
             margin: 24px auto;
+        }
+
+        &__logo-link {
+            height: 74px;
         }
 
         &__logo {

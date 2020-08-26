@@ -22,6 +22,8 @@
         position: absolute;
         top: 36px;
         right: 30px;
+
+        cursor: pointer;
     }
 
     &__close-menu-icon {
@@ -31,6 +33,12 @@
         background-image: url(images/close-menu.svg);
         background-repeat: no-repeat;
         background-size: contain;
+
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(0.9);
+        }
     }
 
     li {
@@ -71,8 +79,8 @@
 @include desktop-small {
     .vertical-menu {
         &__close-menu-icon {
-            width: 21px;
-            height: 21px;
+            width: 18px;
+            height: 18px;
         }
     }
 }
@@ -99,6 +107,11 @@
     .vertical-menu {
         width: 400px;
         padding: 230px 64px;
+
+        &__close-menu-icon {
+            width: 21px;
+            height: 21px;
+        }
 
         &__navigation-link {
             font-size: 18px;

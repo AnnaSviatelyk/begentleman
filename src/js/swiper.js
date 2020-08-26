@@ -1,19 +1,17 @@
 import Swiper, { Pagination } from "swiper";
 Swiper.use([Pagination]);
 
+const swiperInstances = {}
 
 export const createSwiper = (container) => {
-    let init = false
-    let swiper = Swiper
     let isShownPagination = false
 
     let enabled = window.matchMedia('(max-width: 1024px)').matches;
     if (enabled) {
-        if (!init) {
-            init = true
+        if (!swiperInstances[container]) {
             isShownPagination = true
 
-            swiper = new Swiper(container, {
+            swiperInstances[container] = new Swiper(container, {
                 slidesPerView: 3,
                 spaceBetween: 30,
 
@@ -41,11 +39,11 @@ export const createSwiper = (container) => {
             })
         }
     } else {
-        if (init) {
+        if (swiperInstances[container]) {
             isShownPagination = false
-            swiper.destroy();
-            init = false;
-            console.log(init)
+            swiperInstances[container].destroy();
+            swiperInstances[container] = null
+
         }
     }
 }

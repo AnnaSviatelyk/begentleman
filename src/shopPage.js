@@ -5,11 +5,17 @@ import noUiSlider from 'nouislider'
 import 'nouislider/distribute/nouislider.css'
 import { registerActiveClass } from './js/helpers'
 import { initBurgerMenuClickListener } from './js/helpers'
-import { createSwiper } from './js/swiper'
+// import { createSwiper } from './js/swiper'
 
+let isMobile = false
 
-window.addEventListener('load', createSwiper)
-window.addEventListener('resize', createSwiper)
+const checkIsMobile = () => {
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    isMobile = width < 600 ? true : false
+}
+
+window.addEventListener('load', checkIsMobile)
+window.addEventListener('resize', checkIsMobile)
 
 initBurgerMenuClickListener(DOMstrings.burgerMenuIcon, DOMstrings.burgerMenuContainer)
 
@@ -61,6 +67,7 @@ let filtersContainer = { ...defaultFilters }
 const filterData = () => {
     // get active filters
     const activeFilters = Object.keys(filtersContainer).filter(key => filtersContainer[key])
+
     // filter data
     const filteredData = mockData.filter(item => {
 
@@ -83,8 +90,15 @@ const filterData = () => {
         return matches
     })
 
-    renderData(filteredData)
-    noProductsFound(filteredData)
+    if (!isMobile) {
+        renderData(filteredData)
+        noProductsFound(filteredData)
+    } else {
+        document.querySelector(DOMstrings.applyFilters).addEventListener('click', () => {
+            renderData(filteredData)
+            noProductsFound(filteredData)
+        })
+    }
 }
 
 const categoriesSelector = document.querySelectorAll(DOMstrings.selector)
@@ -111,6 +125,12 @@ document.querySelector(DOMstrings.openFilter).addEventListener('click', openMobi
 document.querySelector(DOMstrings.closeFilter).addEventListener('click', closeMobileFilters)
 document.querySelector(DOMstrings.applyFilters).addEventListener('click', closeMobileFilters)
 
+window.addEventListener('resize', () => {
+    if (!isMobile) {
+        closeMobileFilters()
+    }
+})
+
 //Eventlisteners on Category
 const selectCategoryHandler = (category) => {
     //Add eventlistener to every item in NodeList
@@ -128,7 +148,9 @@ const selectCategoryHandler = (category) => {
 
         //Add active class to selected category in list 
         this.classList.add(DOMstrings.selectorOptionActiveClass);
+
         filterProductsByCategory(categoryName)
+
 
     });
 }
