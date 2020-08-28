@@ -5,7 +5,7 @@
 
   overflow: auto;
 
-  background-image: url(images/background-img-small.png);
+  background-image: url(images/background-img-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -152,7 +152,7 @@
     width: 300px;
     height: 250px;
 
-    background-image: url(images/article-main-image-min.png);
+    background-image: url(images/article-main.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -247,7 +247,7 @@
     margin-bottom: 16px;
     overflow: auto;
 
-    background-image: url(images/article-preview-1-min.png);
+    background-image: url(images/article-preview-1.png);
     background-repeat: no-repeat;
     background-size: cover;
     &:last-child {
@@ -312,7 +312,7 @@
 
 @include tablet-small {
   .hero-area {
-    background-image: url(images/background-img-small.png);
+    background-image: url(images/background-img-tablet.png);
 
     &__sub-title {
       font-size: 20px;
@@ -393,7 +393,7 @@
 @include tablet-large {
   .hero-area {
     margin-bottom: 100px;
-    background-image: url(images/background-img-min.png);
+    background-image: url(images/background-img-desktop.png);
     background-position: top;
 
     &__text-container {

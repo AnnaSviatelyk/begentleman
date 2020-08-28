@@ -45,7 +45,6 @@ const getProductImagesHtml = (images, selectedImageIndex = 0) => {
         if (index !== selectedImageIndex) {
             test += `<div class="product-description__more-images-item"  style="background-image: url(images/${images[index]})"></div>`
         }
-        console.log(test)
     })
     return (`<div style="background-image: url(images/${images[selectedImageIndex]})" class="product-description__image-main"></div>
         <div class="product-description__more-images">

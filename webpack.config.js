@@ -4,9 +4,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 let outDirectory = path.resolve(__dirname, 'dist');
 let outputFilename = '[name].js';
+
 
 module.exports = {
     mode: 'production',
@@ -47,7 +50,10 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css"
         }),
-        new webpack.SourceMapDevToolPlugin({})
+
+        new webpack.SourceMapDevToolPlugin({}),
+        new BundleAnalyzerPlugin(),
+        // webpack.optimize.ModuleConcatenationPlugin()
     ],
     module: {
         rules: [
