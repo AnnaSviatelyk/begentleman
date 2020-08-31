@@ -1,6 +1,6 @@
 import './main.scss'
 import { DOMstrings } from './js/domStrings'
-import { initBurgerMenuClickListener } from './js/helpers'
+import { initBurgerMenuClickListener } from './js/helpers';
 import { createSwiper } from './js/swiper'
 
 window.addEventListener('load', () => createSwiper('.swiper-add-products'))

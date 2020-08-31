@@ -51,9 +51,8 @@ module.exports = {
             chunkFilename: "[id].css"
         }),
 
-        new webpack.SourceMapDevToolPlugin({}),
+        // new webpack.SourceMapDevToolPlugin({}),
         new BundleAnalyzerPlugin(),
-        // webpack.optimize.ModuleConcatenationPlugin()
     ],
     module: {
         rules: [
@@ -92,6 +91,8 @@ module.exports = {
                     },
                 ]
             },
+
+
             // {
             //     test: /\.html$/,
             //     use: [
@@ -106,5 +107,6 @@ module.exports = {
             //       exclude: path.resolve(__dirname, 'src/index.html')
             // }
         ]
+
     }
 };

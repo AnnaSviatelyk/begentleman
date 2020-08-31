@@ -44,7 +44,5 @@ export const DOMstrings = {
     flippingImageArrowLeft: '.product-description__arrow--left',
     flippingImageArrowRight: '.product-description__arrow--right',
     imagesContainer: '#slider'
-
-
 }
 

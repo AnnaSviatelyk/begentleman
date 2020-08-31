@@ -1,7 +1,3 @@
-
-import Swiper, { Pagination } from "swiper";
-Swiper.use([Pagination]);
-
 //Register active class
 export const registerActiveClass = (optionClass, optionClassActive) => {
     const filterOptions = document.querySelectorAll(optionClass);
